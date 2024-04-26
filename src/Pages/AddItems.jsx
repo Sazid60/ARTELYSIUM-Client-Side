@@ -52,7 +52,7 @@ const AddItems = () => {
     return (
         <>
             <h1 className="text-center text-2xl md:text-2xl lg:text-3xl  font-bold mt-3" >Add Art & Craft</h1>
-            <p className="text-center  text-xs md:text-lg lg:text-lg max-w-2xl mx-auto mt-2 mb-3" >Bring your ideas to life with our quality craft supplies, igniting your creativity and sparking endless inspiration!</p>
+            <p className="text-center  text-xs md:text-lg lg:text-lg max-w-2xl mx-auto mt-2 mb-3" >Bring your ideas to life with our quality craft supplies!</p>
             <form onSubmit={handleAdd}>
                 {/* Image and item name */}
                 <div className="md:flex mb-2 md:mb-4 lg:mb-4">
@@ -82,12 +82,12 @@ const AddItems = () => {
                         <div className="relative">
                             <select name="subcategory_name" className="select select-bordered border-black w-full appearance-none bg-transparent pr-8">
                                 <option value="" disabled>Select a Subcategory</option>
-                                <option value="landscape_painting">Landscape Painting</option>
-                                <option value="portrait_drawing">Portrait Drawing</option>
-                                <option value="watercolour_painting">Watercolour Painting</option>
-                                <option value="oil_painting">Oil Painting</option>
-                                <option value="charcoal_sketching">Charcoal Sketching</option>
-                                <option value="cartoon_drawing">Cartoon Drawing</option>
+                                <option value="Landscape painting">Landscape Painting</option>
+                                <option value="Portrait Drawing">Portrait Drawing</option>
+                                <option value="Watercolour Painting">Watercolour Painting</option>
+                                <option value="Oil Painting">Oil Painting</option>
+                                <option value="Charcoal Sketching">Charcoal Sketching</option>
+                                <option value="Cartoon Drawing">Cartoon Drawing</option>
                             </select>
                             <div className="select-arrow"></div>
                         </div>
