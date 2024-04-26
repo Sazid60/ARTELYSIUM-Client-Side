@@ -5,7 +5,7 @@ import ArtCards from "../Components/ArtCards";
 
 const Home = () => {
     const loadedCards = useLoaderData()
-    console.log(loadedCards)
+    // console.log(loadedCards)
     return (
         <div>
             <Banner></Banner>

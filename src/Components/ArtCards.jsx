@@ -1,11 +1,11 @@
-import { CiBadgeDollar, CiLocationOn } from "react-icons/ci";
+
 import { FaStar } from "react-icons/fa";
-import { TbRulerMeasure } from "react-icons/tb";
+
 import { Link } from "react-router-dom";
-// import { Link } from "react-router-dom";
+
 
 const ArtCards = ({ singleArtData }) => {
-    const { image, item_name, subcategory_name, price, rating, customization, description, processing_time, stock_status, user_email, user_name } = singleArtData;
+    const { _id, image, item_name, subcategory_name, price, rating, customization, description, processing_time, stock_status, user_email, user_name } = singleArtData;
     // console.log(singleArtData)
     return (
         <>
@@ -36,7 +36,7 @@ const ArtCards = ({ singleArtData }) => {
                         {/* <Link className="w-full" to={`/estate-details/${id}`}>
                         <button className="btn bg-[#E1B453] w-full text-white text-xs btn-sm mt-2">View Details</button>
                     </Link> */}
-                        <Link className="w-full" to={`/`}>
+                        <Link className="w-full" to={`/craftArts/${_id}`}>
                         <button className="btn bg-[#E1B453] w-full text-white text-xs btn-sm mt-2 rounded-md">View Details</button>
                     </Link>
                     </div>

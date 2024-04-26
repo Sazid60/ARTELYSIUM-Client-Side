@@ -8,6 +8,7 @@ import AllItems from "../Pages/AllItems";
 import PrivateRoutes from "./PrivateRoutes";
 import AddItems from "../Pages/AddItems";
 import MyItems from "../Pages/MyItems";
+import DetailsArtCard from "../Pages/DetailsArtCard";
 
 
 const router = createBrowserRouter([
@@ -35,6 +36,11 @@ const router = createBrowserRouter([
             path: "/allItems",
             element: <AllItems></AllItems>,
             loader :()=> fetch('http://localhost:5000/craftArts')
+        },
+        {
+            path: "/craftArts/:id",
+            element: <DetailsArtCard></DetailsArtCard>,
+            loader :({params})=> fetch(`http://localhost:5000/craftArts/${params.id}`)
         },
         {
             path: "/addItems",
