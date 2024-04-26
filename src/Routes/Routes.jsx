@@ -9,6 +9,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import AddItems from "../Pages/AddItems";
 import MyItems from "../Pages/MyItems";
 import DetailsArtCard from "../Pages/DetailsArtCard";
+import UpdateArtItem from "../Pages/UpdateArtItem";
 
 
 const router = createBrowserRouter([
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
         {
             path: "/craftArts/:id",
             element: <DetailsArtCard></DetailsArtCard>,
+            loader :({params})=> fetch(`http://localhost:5000/craftArts/${params.id}`)
+        },
+        {
+            path: "/craftArtsUpdate/:id",
+            element: <PrivateRoutes><UpdateArtItem></UpdateArtItem></PrivateRoutes>,
             loader :({params})=> fetch(`http://localhost:5000/craftArts/${params.id}`)
         },
         {

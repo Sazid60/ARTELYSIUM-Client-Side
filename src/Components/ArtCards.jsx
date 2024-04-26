@@ -33,9 +33,7 @@ const ArtCards = ({ singleArtData }) => {
 
                     </div>
                     <div className="card-actions w-full">
-                        {/* <Link className="w-full" to={`/estate-details/${id}`}>
-                        <button className="btn bg-[#E1B453] w-full text-white text-xs btn-sm mt-2">View Details</button>
-                    </Link> */}
+
                         <Link className="w-full" to={`/craftArts/${_id}`}>
                         <button className="btn bg-[#E1B453] w-full text-white text-xs btn-sm mt-2 rounded-md">View Details</button>
                     </Link>

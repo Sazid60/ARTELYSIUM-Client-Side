@@ -1,12 +1,12 @@
 
 import { FaStar } from 'react-icons/fa';
-import { Link, useLoaderData, useParams } from 'react-router-dom';
+import { Link, useLoaderData} from 'react-router-dom';
 
 const DetailsArtCard = () => {
     // const { id } = useParams()
     const loadedArt = useLoaderData()
-    console.log(loadedArt)
-    const {image, item_name, subcategory_name, price, rating, customization, description, processing_time, stock_status, user_email, user_name } = loadedArt ;
+    // console.log(loadedArt)
+    const {_id,image, item_name, subcategory_name, price, rating, customization, description, processing_time, stock_status, user_email, user_name } = loadedArt ;
     return (
         <div className="flex flex-col md:flex-row lg:flex-row justify-around gap-6 mt-4 min-h-full">
             {/* <Helmet>
@@ -56,10 +56,14 @@ const DetailsArtCard = () => {
                                 <td className="px-2 py-1 text-left font-bold border text-xs md:text-lg lg:text-lg">Created By</td>
                                 <td className="px-2 py-1 border border-solid text-xs md:text-lg lg:text-lg">{user_name}</td>
                             </tr>
+                            <tr>
+                                <td className="px-2 py-1 text-left font-bold border text-xs md:text-lg lg:text-lg">Creator Email</td>
+                                <td className="px-2 py-1 border border-solid text-xs md:text-lg lg:text-lg">{user_email}</td>
+                            </tr>
                         </tbody>
                     </table>
                     <div className="flex lg:justify-center gap-3">
-                        <Link to={"/"}> <button className="btn btn-sm bg-[#FFECB3] mt-4 mb-6 text-black w-28">Update</button></Link>
+                        <Link to={`/craftArtsUpdate/${_id}`}> <button className="btn btn-sm bg-[#FFECB3] mt-4 mb-6 text-black w-28">Update</button></Link>
                         <button className="btn btn-sm bg-[#da3131] mt-4 mb-6 text-white w-28">Delete</button>
                     </div>
                 </div>
