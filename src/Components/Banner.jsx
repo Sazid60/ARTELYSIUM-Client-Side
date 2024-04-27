@@ -10,7 +10,7 @@ const Banner = () => {
     return (
         <div className='relative mt-4'>
             <div className='w-[70%] h-[70%] absolute inset-0 flex flex-col z-10 translate-x-4 md:translate-x-16 lg:translate-x-16 translate-y-6 md:translate-y-16 lg:translate-y-16 '>
-                <h1 className='text-2xl md:text-4xl lg:text-6xl font-bold text-white mb-2 md:mb-3 lg:mb-6'>Discover Your <br /> Desired<span className='text-[#333333]'> Arts </span></h1>
+                <h1 className='text-2xl md:text-4xl lg:text-6xl font-bold text-white mb-2 md:mb-3 lg:mb-6'>Discover Your <br /> Desired<span className='text-[#7958f0]'> Arts </span></h1>
                 <div className='text-sm  md:text-xl lg:text-4xl text-white  font-semibold' >
                     <Typewriter
                         words={['Landscape Painting', 'Portrait Drawing', 'Watercolour Painting', 'Oil Painting', 'Charcoal Sketching', 'Cartoon Drawing']}

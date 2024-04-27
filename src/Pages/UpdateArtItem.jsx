@@ -1,16 +1,27 @@
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import useRefetch from "../RefetchHook/useRefetch";
+import { Triangle } from "react-loader-spinner";
+
 
 const UpdateArtItem = () => {
-    const loadedArt = useLoaderData()
-    const { _id, image, item_name, subcategory_name, price, rating, customization, description, processing_time, stock_status, user_email, user_name } = loadedArt;
+    // const loadedArt = useLoaderData()
+    const { id } = useParams()
+    const { art, refetch, loading } = useRefetch(id)
+
+    // console.log(art)
+    // console.log(id)
+
+    const { _id, image, item_name, subcategory_name, price, rating, customization, description, processing_time, stock_status, user_email, user_name } = art;
+
     const [subcategoryName, setSubcategoryName] = useState(subcategory_name);
     const [customizationValue, setCustomizationValue] = useState(customization);
     const [stockStatus, setStockStatus] = useState(stock_status);
 
 
     const handleUpdate = event => {
+
         event.preventDefault()
         const form = event.target;
         const image = form.image.value;
@@ -36,19 +47,37 @@ const UpdateArtItem = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                refetch();
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success!',
                         text: 'Item Updated Successfully',
                         icon: 'success',
                         confirmButtonText: 'Ok'
-                    })
+                    });
+
                 }
             })
     }
 
 
     // console.log(loadedArt)
+
+    if (loading) {
+        return <div className="flex justify-center items-center min-h-screen">
+            <Triangle
+                visible={true}
+                height="80"
+                width="80"
+                color="#4fa94d"
+                ariaLabel="triangle-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+            />
+        </div>
+    }
+
+
     return (
         <>
             <h1 className="text-center text-2xl md:text-2xl lg:text-3xl  font-bold mt-3" >Update Art & Craft</h1>
