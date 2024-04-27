@@ -35,16 +35,16 @@ const AddItems = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if(data.insertedId){
+                if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',
                         text: 'Item Added Successfully',
                         icon: 'success',
                         confirmButtonText: 'Ok'
-                      })
+                    })
                 }
             })
-
+            form.reset()
 
         // console.log(newCraftArts )
     }
@@ -61,7 +61,7 @@ const AddItems = () => {
                             <span className="label-text">Image URL</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="image" placeholder="Image URL" className="input input-bordered border-black w-full" />
+                            <input type="text" name="image" placeholder="Image URL" className="input input-bordered border-black w-full" required />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2 md:ml-2 lg:ml-4">
@@ -69,7 +69,7 @@ const AddItems = () => {
                             <span className="label-text">Item Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="item_name" placeholder="Item Name" className="input input-bordered border-black w-full" />
+                            <input type="text" name="item_name" placeholder="Item Name" className="input input-bordered border-black w-full" required />
                         </label>
                     </div>
                 </div>
@@ -80,7 +80,7 @@ const AddItems = () => {
                             <span className="label-text">Subcategory Name</span>
                         </label>
                         <div className="relative">
-                            <select name="subcategory_name" className="select select-bordered border-black w-full appearance-none bg-transparent pr-8">
+                            <select name="subcategory_name" defaultValue={""} className="select select-bordered border-black w-full appearance-none bg-transparent pr-8" required>
                                 <option value="" disabled>Select a Subcategory</option>
                                 <option value="Landscape painting">Landscape Painting</option>
                                 <option value="Portrait Drawing">Portrait Drawing</option>
@@ -98,7 +98,7 @@ const AddItems = () => {
                             <span className="label-text">Price</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="price" placeholder="Price" className="input input-bordered border-black w-full" />
+                            <input type="text" name="price" placeholder="Price" className="input input-bordered border-black w-full" required />
                         </label>
                     </div>
                     <div className="form-control md:w-1/4 md:ml-2 lg:ml-4">
@@ -106,7 +106,7 @@ const AddItems = () => {
                             <span className="label-text">Rating</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="rating" placeholder="Rating" className="input input-bordered border-black w-full" />
+                            <input type="text" name="rating" placeholder="Rating" className="input input-bordered border-black w-full" required />
                         </label>
                     </div>
 
@@ -114,10 +114,10 @@ const AddItems = () => {
                         <label className="label">
                             <span className="label-text">Customization</span>
                         </label>
-                        <select name="customization" className="select select-bordered border-black w-full ">
+                        <select name="customization" defaultValue={""} className="select select-bordered border-black w-full " required>
                             <option value="" disabled>Want To Customize ?</option>
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
                         </select>
                     </div>
 
@@ -130,7 +130,7 @@ const AddItems = () => {
                             <span className="label-text">Short Description</span>
                         </label>
                         <label className="input-group">
-                            <textarea name="description" placeholder="Short Description" className="textarea textarea-bordered border-black w-full" rows="3"></textarea>
+                            <textarea name="description" placeholder="Short Description" className="textarea textarea-bordered border-black w-full" rows="3" required></textarea>
                         </label>
                     </div>
                 </div>
@@ -141,7 +141,7 @@ const AddItems = () => {
                             <span className="label-text">Processing Time</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="processing_time" placeholder="Processing Time" className="input input-bordered border-black w-full" />
+                            <input type="text" name="processing_time" placeholder="Processing Time" className="input input-bordered border-black w-full" required />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2 md:ml-2 lg:ml-4 relative">
@@ -149,7 +149,7 @@ const AddItems = () => {
                             <span className="label-text">Stock Status</span>
                         </label>
                         <div className="relative">
-                            <select name="stock_status" className="select select-bordered border-black w-full appearance-none bg-transparent pr-8">
+                            <select name="stock_status" defaultValue={""} className="select select-bordered border-black w-full appearance-none bg-transparent pr-8" required>
                                 <option value="" disabled >Select Stock Status</option>
                                 <option value="In stock">In stock</option>
                                 <option value="Made to Order">Made to Order</option>

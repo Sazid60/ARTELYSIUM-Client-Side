@@ -36,7 +36,7 @@ const DetailsArtCard = () => {
                         <tbody>
                             <tr >
                                 <td className="text-xs md:text-lg lg:text-lg text-left font-bold border border-solid px-2 py-1">Category</td>
-                                <td className="text-xs md:text-lg lg:text-lg border border-solid  px-2 py-1">{subcategory_name} BDT</td>
+                                <td className="text-xs md:text-lg lg:text-lg border border-solid  px-2 py-1">{subcategory_name}</td>
                             </tr>
                             <tr >
                                 <td className="text-xs md:text-lg lg:text-lg text-left font-bold border border-solid px-2 py-1">Price</td>

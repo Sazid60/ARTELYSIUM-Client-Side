@@ -47,7 +47,7 @@ const AllArtTable = ({ loadedCards }) => {
                   </span>
                 </td>
               </tr>
-            </tbody>)
+            </tbody>).reverse()
           }
         </table>
       </div>
