@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         },
         {
             path: "/craftArts/:id",
-            element: <DetailsArtCard></DetailsArtCard>,
+            element: <PrivateRoutes><DetailsArtCard></DetailsArtCard></PrivateRoutes>,
             loader :({params})=> fetch(`http://localhost:5000/craftArts/${params.id}`)
         },
         {

@@ -11,9 +11,9 @@ const DetailsArtCard = () => {
     // console.log(loadedArt)
     const { _id, image, item_name, subcategory_name, price, rating, customization, description, processing_time, stock_status, user_email, user_name } = loadedArt;
     return (
-        <div className="flex flex-col md:flex-row lg:flex-row justify-around gap-6 mt-4 min-h-full">
+        <div className="flex flex-col  justify-around item gap-6 mt-4 min-h-full">
 
-            <div className='relative h-[155px] md:h-[310px] lg:h-[400px] w-full md:w-1/2 lg:w-1/2'>
+            <div className='relative h-[155px] md:h-[310px] lg:h-[350px] w-full'>
                 <div className='flex justify-center items-center absolute inset-0 bg-cover bg-center bg-no-repeat '>
                     <img src={image} className=" shadow-2xl w-full h-full object-cover" alt="No Image" />
                 </div>
@@ -34,6 +34,10 @@ const DetailsArtCard = () => {
                 <div className="overflow-x-auto" >
                     <table className=" w-full text-sm border border-solid table-auto ">
                         <tbody>
+                            <tr >
+                                <td className="text-xs md:text-lg lg:text-lg text-left font-bold border border-solid px-2 py-1">Category</td>
+                                <td className="text-xs md:text-lg lg:text-lg border border-solid  px-2 py-1">{subcategory_name} BDT</td>
+                            </tr>
                             <tr >
                                 <td className="text-xs md:text-lg lg:text-lg text-left font-bold border border-solid px-2 py-1">Price</td>
                                 <td className="text-xs md:text-lg lg:text-lg border border-solid  px-2 py-1">{price} BDT</td>
@@ -64,9 +68,12 @@ const DetailsArtCard = () => {
                             </tr>
                         </tbody>
                     </table>
-                    <div className="flex lg:justify-center gap-3">
+                    {/* <div className="flex lg:justify-center gap-3">
                         <Link to={`/craftArtsUpdate/${_id}`}> <button className="btn btn-sm bg-[#FFECB3] mt-4 mb-6 text-black w-28">Update</button></Link>
                         <button className="btn btn-sm bg-[#da3131] mt-4 mb-6 text-white w-24" disabled={!user}>Delete</button>
+                    </div> */}
+                    <div className="flex lg:justify-center gap-3">
+                        <Link to={`/allItems`}> <button className="btn btn-sm bg-[#FFECB3] mt-4 mb-6 text-black w-28">Explore More</button></Link>
                     </div>
                 </div>
             </div>
