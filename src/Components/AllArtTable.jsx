@@ -1,6 +1,5 @@
-import { FaStar } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
+import { Link } from "react-router-dom";
 
 const AllArtTable = ({ loadedCards }) => {
 
@@ -36,13 +35,13 @@ const AllArtTable = ({ loadedCards }) => {
                 <td className="p-1 lg:p-3  max-w-[60px] lg:max-w-full">
                   <p>{singleCard.subcategory_name}</p>
                 </td>
-                <td className="p-1 lg:p-3">
+                <td className="p-1 lg:p-3  max-w-[60px] lg:max-w-full">
                   <p>{singleCard.price} BDT</p>
                 </td>
-                <td className="p-1 lg:p-3">
+                <td className="p-1 lg:p-3  max-w-[60px] lg:max-w-full">
                   <p>{singleCard.user_name}</p>
                 </td>
-                <td className="py-2 lg:p-3">
+                <td className="py-2 lg:p-3  max-w-[60px] lg:max-w-full">
                   <span className="">
                     <Link to={`/craftArts/${singleCard._id}`}><span className="text-[7px] md:text-[10px] lg:text-sm btn btn-xs bg-[#333333] text-white">Details</span></Link>
                   </span>

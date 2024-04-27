@@ -68,10 +68,7 @@ const DetailsArtCard = () => {
                             </tr>
                         </tbody>
                     </table>
-                    {/* <div className="flex lg:justify-center gap-3">
-                        <Link to={`/craftArtsUpdate/${_id}`}> <button className="btn btn-sm bg-[#FFECB3] mt-4 mb-6 text-black w-28">Update</button></Link>
-                        <button className="btn btn-sm bg-[#da3131] mt-4 mb-6 text-white w-24" disabled={!user}>Delete</button>
-                    </div> */}
+
                     <div className="flex lg:justify-center gap-3">
                         <Link to={`/allItems`}> <button className="btn btn-sm bg-[#FFECB3] mt-4 mb-6 text-black w-28">Explore More</button></Link>
                     </div>

@@ -6,34 +6,39 @@ import { Triangle } from "react-loader-spinner";
 
 
 const UpdateArtItem = () => {
-    // const loadedArt = useLoaderData()
+    const loadedArt = useLoaderData()
     const { id } = useParams()
     const { art, refetch, loading } = useRefetch(id)
 
-    // console.log(art)
+    console.log(art)
     // console.log(id)
 
-    const { _id, image, item_name, subcategory_name, price, rating, customization, description, processing_time, stock_status, user_email, user_name } = art;
+    const { _id, image, item_name, price, rating, description, processing_time, user_email, user_name } = art;
 
-    const [subcategoryName, setSubcategoryName] = useState(subcategory_name);
-    const [customizationValue, setCustomizationValue] = useState(customization);
-    const [stockStatus, setStockStatus] = useState(stock_status);
+    const [subcategoryName, setSubcategoryName] = useState(loadedArt.subcategory_name);
+    const [customizationValue, setCustomizationValue] = useState(loadedArt.customization);
+    const [stockStatus, setStockStatus] = useState(loadedArt.stock_status);
 
+    console.log(subcategoryName, customizationValue, stockStatus)
 
     const handleUpdate = event => {
 
         event.preventDefault()
+        if (loading) {
+            return
+        }
         const form = event.target;
         const image = form.image.value;
         const item_name = form.item_name.value;
+        const subcategory_name = form.subcategory_name.value;
         const price = form.price.value;
         const rating = form.rating.value;
+        const customization = form.customization.value;
         const description = form.description.value;
         const processing_time = form.processing_time.value;
-        const user_email = form.user_email.value;
-        const user_name = form.user_name.value;
+        const stock_status = form.stock_status.value;
 
-        const updatedCraftArts = { image, item_name, subcategory_name: subcategoryName, price, rating, customization: customizationValue, description, processing_time, stock_status: stockStatus, user_email, user_name }
+        const updatedCraftArts = { image, item_name, subcategory_name, price, rating, customization, description, processing_time, stock_status, user_email, user_name }
         console.log(updatedCraftArts)
 
         // Update 
@@ -119,8 +124,8 @@ const UpdateArtItem = () => {
                             <span className="label-text">Subcategory Name</span>
                         </label>
                         <div className="relative">
-                            <select name="subcategory_name" onChange={(e) => setSubcategoryName(e.target.value)} className="select select-bordered border-black w-full appearance-none bg-transparent pr-8">
-                                <option disabled>Select a Subcategory</option>
+                            <select name="subcategory_name" defaultValue={subcategoryName} onChange={(e) => setSubcategoryName(e.target.value)} className="select  border-black w-full pr-8">
+                                <option disabled >Select a Subcategory</option>
                                 <option value="Landscape painting" >Landscape Painting</option>
                                 <option value="Portrait Drawing">Portrait Drawing</option>
                                 <option value="Watercolour Painting">Watercolour Painting</option>
@@ -153,7 +158,7 @@ const UpdateArtItem = () => {
                         <label className="label">
                             <span className="label-text">Customization</span>
                         </label>
-                        <select name="customization" onChange={(e) => setCustomizationValue(e.target.value)} className="select select-bordered border-black w-full ">
+                        <select name="customization" defaultValue={customizationValue} onChange={(e) => setCustomizationValue(e.target.value)} className="select select-bordered border-black w-full ">
                             <option value="" disabled>Want To Customize ?</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -186,7 +191,7 @@ const UpdateArtItem = () => {
                             <span className="label-text">Stock Status</span>
                         </label>
                         <div className="relative">
-                            <select name="stock_status" onChange={(e) => setStockStatus(e.target.value)} className="select select-bordered border-black w-full appearance-none bg-transparent pr-8">
+                            <select name="stock_status" defaultValue={stockStatus} onChange={(e) => setStockStatus(e.target.value)} className="select select-bordered border-black w-full appearance-none bg-transparent pr-8">
                                 <option value="" disabled >Select Stock Status</option>
                                 <option value="In stock">In stock</option>
                                 <option value="Made to Order">Made to Order</option>
