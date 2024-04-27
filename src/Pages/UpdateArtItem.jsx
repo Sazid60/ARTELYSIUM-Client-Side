@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateArtItem = () => {
     const loadedArt = useLoaderData()
@@ -21,8 +22,29 @@ const UpdateArtItem = () => {
         const user_email = form.user_email.value;
         const user_name = form.user_name.value;
 
-        const updatedCraftArts = { image, item_name, subcategory_name:subcategoryName, price, rating, customization:customizationValue, description, processing_time, stock_status:stockStatus, user_email, user_name }
+        const updatedCraftArts = { image, item_name, subcategory_name: subcategoryName, price, rating, customization: customizationValue, description, processing_time, stock_status: stockStatus, user_email, user_name }
         console.log(updatedCraftArts)
+
+        // Update 
+        fetch(`http://localhost:5000/craftArts/${_id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedCraftArts)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Item Updated Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
+                    })
+                }
+            })
     }
 
 
@@ -102,14 +124,12 @@ const UpdateArtItem = () => {
                         <label className="label">
                             <span className="label-text">Customization</span>
                         </label>
-                        <select name="customization"  onChange={(e) => setCustomizationValue(e.target.value)} className="select select-bordered border-black w-full ">
+                        <select name="customization" onChange={(e) => setCustomizationValue(e.target.value)} className="select select-bordered border-black w-full ">
                             <option value="" disabled>Want To Customize ?</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
                         </select>
                     </div>
-
-
                 </div>
                 {/* Short Description */}
                 <div className="md:flex mb-2 md:mb-4 lg:mb-4">
@@ -137,7 +157,7 @@ const UpdateArtItem = () => {
                             <span className="label-text">Stock Status</span>
                         </label>
                         <div className="relative">
-                            <select name="stock_status"  onChange={(e) => setStockStatus(e.target.value)} className="select select-bordered border-black w-full appearance-none bg-transparent pr-8">
+                            <select name="stock_status" onChange={(e) => setStockStatus(e.target.value)} className="select select-bordered border-black w-full appearance-none bg-transparent pr-8">
                                 <option value="" disabled >Select Stock Status</option>
                                 <option value="In stock">In stock</option>
                                 <option value="Made to Order">Made to Order</option>
@@ -165,7 +185,7 @@ const UpdateArtItem = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Update Item" className="btn btn-block bg-[#E1B453] text-white" />
+                <input type="submit" value="Update Item" className="btn btn-block bg-[#333333] text-white" />
             </form>
         </>
     );

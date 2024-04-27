@@ -12,7 +12,7 @@ const PrivateRoutes = ({ children }) => {
     console.log(location)
 
     if (loading) {
-        return <div className="min-h-screen flex justify-center items-center">
+        return <div className="flex justify-center items-center min-h-screen">
             <Triangle
                 visible={true}
                 height="80"

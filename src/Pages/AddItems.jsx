@@ -177,7 +177,7 @@ const AddItems = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Add Item" className="btn btn-block bg-[#E1B453]" />
+                <input type="submit" value="Add Item" className="btn btn-block bg-[#333333] text-white" />
             </form>
         </>
     );

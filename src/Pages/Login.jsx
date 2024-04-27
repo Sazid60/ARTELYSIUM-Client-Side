@@ -6,30 +6,29 @@ import toast from "react-hot-toast";
 
 
 const Login = () => {
-    const { signInUser, googleSignIn, gitHubSignIn } = useContext(AuthContext)
-    const location = useLocation()
-    console.log(location)
-
+    const [showPassword, setShowPassword] = useState(false)
     const [success, setSuccess] = useState("")
     const [errorMessage, setErrorMessage] = useState("")
-    const [showPass, setShowPass] = useState(false)
+
+    const { logInUser, googleLogin, gitHubLogin } = useContext(AuthContext)
+    const location = useLocation()
 
     const navigate = useNavigate()
 
     const handleShowPassword = () => {
-        setShowPass(!showPass)
+        setShowPassword(!showPassword)
     }
 
     const handleSignIn = (e) => {
         e.preventDefault()
-        const form = new FormData(e.currentTarget)
-        const email = form.get("email")
-        const password = form.get("password")
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
 
         setSuccess("")
         setErrorMessage("")
 
-        signInUser(email, password)
+        logInUser(email, password)
             .then(() => {
                 toast.success('Login Successful');
                 setSuccess("Successfully Logged In")
@@ -41,11 +40,10 @@ const Login = () => {
             })
     }
 
+    // Social 
+    const handleSocialLogin = (socialLoginProvider) => {
 
-    // Social Login
-    const handleSocialLogin = (socialProvider) => {
-
-        socialProvider()
+        socialLoginProvider()
             .then(() => {
                 toast.success('Login Successful')
                 setSuccess("Successfully Logged In")
@@ -55,35 +53,32 @@ const Login = () => {
                 setErrorMessage(error.message)
                 toast.error(error.message)
             })
-
     }
 
     return (
-        <div className="lg:mb-4 flex justify-center min-h-[40vh]">
-            {/* <Helmet>
-                <title>Login</title>
-            </Helmet> */}
+        <div className="flex w-full justify-center min-h-[40vh] lg:mb-4">
+
             <div className="hero-content flex-col w-full">
                 <div className="text-center">
-                    <h1 className="text-xl md:text-2xl lg:text-3xl font-bold" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="320">Login now!</h1>
+                    <h1 className="font-bold text-xl md:text-2xl lg:text-3xl " >Login now!</h1>
                 </div>
-                <div className="card w-full lg:w-[40%] shadow-2xl bg-white" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="400">
-                    <form className="card-body w-full pb-2" onSubmit={handleSignIn} data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+                <div className="card w-full lg:w-[40%] bg-white shadow-2xl">
+                    <form className="card-body w-full pb-2" onSubmit={handleSignIn}>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-gray-700 text-sm">Email</span>
+                                <span className="label-text text-sm text-gray-700 ">Email</span>
                             </label>
-                            <input type="email" name="email" placeholder="Email" className="input input-bordered text-gray-700 bg-transparent border-gray-300 " required />
+                            <input type="email" name="email" placeholder="Email" className="input input-bordered bg-transparent border-gray-300 text-gray-700" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-gray-700 text-sm">Password</span>
+                                <span className="label-text text-sm text-gray-700 ">Password</span>
                             </label>
                             <div className="relative w-full">
-                                <input type={showPass ? "text" : "password"} placeholder="Password" name="password" className="input input-bordered text-gray-700 bg-transparent border-gray-300 w-full " required />
-                                <div onClick={handleShowPassword} className="absolute top-[40%] left-[86%] md:left-[89%] lg:left-[90%]" >
+                                <input type={showPassword ? "text" : "password"} placeholder="Password" name="password" className="input input-bordered border-gray-300 text-gray-700 bg-transparent  w-full " required />
+                                <div onClick={handleShowPassword} className="absolute top-[39%] left-[85%] md:left-[88%] lg:left-[89%]" >
                                     {
-                                        showPass ? <FaRegEyeSlash /> : <FaRegEye />
+                                        showPassword ? <FaRegEyeSlash /> : <FaRegEye />
                                     }
                                 </div>
                             </div>
@@ -95,16 +90,16 @@ const Login = () => {
                             }
                         </div>
                         <div className="form-control mt-2" >
-                            <button className="btn bg-[#E1B453] border-0 text-white">Login</button>
+                            <button className="btn text-white bg-[#333333] border-0 ">Login</button>
                         </div>
                         <div className="mt-2 text-center">
-                            <p className="text-gray-700 text-sm">Do Not Have Account ? <Link className="text-blue-600 font-semibold" to={"/register"} state={location.state}>Register</Link> </p>
+                            <p className="text-sm text-gray-700 ">Do Not Have Account ? <Link className="text-blue-600 font-semibold" to={"/register"} state={location.state}>Register</Link> </p>
                         </div>
                     </form>
                     <div className="divider text-gray-700">Continue With</div>
                     <div className="flex justify-center gap-4 lg:gap-7 mb-6 pb-0">
-                        <button className="btn btn-sm rounded-full" onClick={() => handleSocialLogin(googleSignIn)}><FaGoogle className="text-xl text-[#DB4437]" />Google</button>
-                        <button className="btn btn-sm rounded-full" onClick={() => handleSocialLogin(gitHubSignIn)}><FaGithub className="text-2xl bg-black text-white rounded-full border border-white" />Github</button>
+                        <button className="btn btn-sm rounded-full" onClick={() => handleSocialLogin(googleLogin)}><FaGoogle className="text-xl text-[#DB4437]" />Google</button>
+                        <button className="btn btn-sm rounded-full" onClick={() => handleSocialLogin(gitHubLogin)}><FaGithub className="text-2xl bg-black text-white rounded-full border border-white" />Github</button>
                     </div>
                 </div>
             </div>

@@ -6,45 +6,44 @@ export const AuthContext = createContext(null)
 const googleProvider = new GoogleAuthProvider();
 const gitHubProvider = new GithubAuthProvider();
 
+// eslint-disable-next-line react/prop-types
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
 
 
-    // Const Register
+    // Register User
     const createUser = (email, password) => {
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
-    // Update User 
+
+    // User SignIn
+    const logInUser = (email, password) => {
+        setLoading(true)
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+
+    // Google Sign In
+    const googleLogin = () => {
+        setLoading(true)
+        return signInWithPopup(auth, googleProvider)
+    }
+
+    //  Github Sign In
+    const gitHubLogin = () => {
+        setLoading(true)
+        return signInWithPopup(auth, gitHubProvider)
+    }
+    //User Update
     const updateUser = (name, photoUrl) => {
-        // setLoading(true)
         return updateProfile(auth.currentUser, {
             displayName: name,
             photoURL: photoUrl
         })
     }
-
-    // SignIn User
-    const signInUser = (email, password) => {
-        setLoading(true)
-        return signInWithEmailAndPassword(auth, email, password)
-    }
-
-    // Sign In With Google
-    const googleSignIn = () => {
-        setLoading(true)
-        return signInWithPopup(auth, googleProvider)
-    }
-
-    // SignIn With Github
-    const gitHubSignIn = () => {
-        setLoading(true)
-        return signInWithPopup(auth, gitHubProvider)
-    }
-
-    // Signout
+    // Log out
     const signOutUser = () => {
         setLoading(true)
         return signOut(auth)
@@ -63,9 +62,19 @@ const AuthProvider = ({ children }) => {
     }, [])
 
 
-    const authInfo = { user, loading, createUser, updateUser, signInUser, signOutUser,googleSignIn,gitHubSignIn,setUser}
+    const authInformation = {
+        user, 
+        loading, 
+        createUser,
+        updateUser, 
+        logInUser, 
+        signOutUser,
+        googleLogin,
+        gitHubLogin,
+        setUser
+    }
     return (
-        <AuthContext.Provider value={authInfo}>
+        <AuthContext.Provider value={authInformation}>
             {children}
         </AuthContext.Provider>
     );
