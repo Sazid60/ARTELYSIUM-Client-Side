@@ -12,6 +12,9 @@ const ArtCards = ({ singleArtData }) => {
             {/* Card */}
             <div className="bg-base-100 shadow-md p-2 hover:scale-105 hover:shadow-2xl   " >
                 <figure className="w-full "><img className="object-cover h-32 md:h-32 lg:h-36 w-full" src={image} alt="" />
+                <h1 className={`font-medium text-xs flex justify-center items-center rounded-sm bg-[#1a1919] text-white px-1 py-0.5}`}>
+                            {stock_status}
+                        </h1>
                 </figure>
                 <div className="p-2">
                     <div>
@@ -20,8 +23,8 @@ const ArtCards = ({ singleArtData }) => {
 
                         <div className="flex items-center justify-between mb-4">
                             <p className=" text-sm text-[#333333] flex items-center gap-1 "><span className="text-black font-bold">Price : </span> <span className="font-bold">{price} BDT</span> </p>
-                            <h1 className={`font-medium text-xs flex justify-center items-center rounded-sm bg-[#FFECB3] text-black' px-1 py-0.5}`}>
-                                {stock_status}
+                            <h1 className={`font-medium text-xs flex justify-center items-center rounded-sm px-1 py-0.5}`}>
+                                Customization : {customization}
                             </h1>
                         </div>
                     </div>
