@@ -125,13 +125,13 @@ const UpdateArtItem = () => {
                         </label>
                         <div className="relative">
                             <select name="subcategory_name" defaultValue={subcategoryName} onChange={(e) => setSubcategoryName(e.target.value)} className="select  border-black w-full pr-8">
-                                <option disabled >Select a Subcategory</option>
-                                <option value="Landscape Painting" >Landscape Painting</option>
-                                <option value="Portrait Drawing">Portrait Drawing</option>
-                                <option value="Watercolour Painting">Watercolour Painting</option>
-                                <option value="Oil Painting" >Oil Painting</option>
-                                <option value="Charcoal Sketching">Charcoal Sketching</option>
-                                <option value="Cartoon Drawing">Cartoon Drawing</option>
+                                <option value="" disabled >Select a Subcategory</option>
+                                <option value="Landscape-Painting" >Landscape Painting</option>
+                                <option value="Portrait-Drawing">Portrait Drawing</option>
+                                <option value="Watercolour-Painting">Watercolour Painting</option>
+                                <option value="Oil-Painting" >Oil Painting</option>
+                                <option value="Charcoal-Sketching">Charcoal Sketching</option>
+                                <option value="Cartoon-Drawing">Cartoon Drawing</option>
                             </select>
                             <div className="select-arrow"></div>
                         </div>

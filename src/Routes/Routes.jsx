@@ -10,6 +10,7 @@ import AddItems from "../Pages/AddItems";
 import MyItems from "../Pages/MyItems";
 import DetailsArtCard from "../Pages/DetailsArtCard";
 import UpdateArtItem from "../Pages/UpdateArtItem";
+import CategorizedData from "../Pages/CategorizedData";
 
 
 const router = createBrowserRouter([
@@ -55,6 +56,11 @@ const router = createBrowserRouter([
         {
             path: "/myItems",
             element: <PrivateRoutes><MyItems></MyItems></PrivateRoutes>,
+        },
+        {
+            path: "/categorizedData/:id",
+            element: <CategorizedData></CategorizedData>,
+            loader : ({params})=> fetch(`http://localhost:5000/categorizedData/${params.id}`)
         },
       ]
     },

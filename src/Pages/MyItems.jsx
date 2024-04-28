@@ -9,7 +9,7 @@ const MyItems = () => {
     const { user } = useContext(AuthContext)
     console.log(user)
     const [loadedData, setLoadedData] = useState([])
-    const [showAll, setShowAll] = useState(false);
+    // const [showAll, setShowAll] = useState(false);
     const [sortByCustomization, setSortByCustomization] = useState(null);
 
 

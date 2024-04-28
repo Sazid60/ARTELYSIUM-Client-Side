@@ -26,19 +26,19 @@ const Navbar = () => {
 
         <li className="mr-2">
             <NavLink className={({ isActive }) => isActive ? 'btn btn-sm bg-[#e6e1e1]' : 'bg-transparent border-0 btn btn-sm'} to={"/allItems"}>
-                All Craft Items
+                All Arts & Crafts
             </NavLink>
         </li>
 
         <li className="mr-2">
             <NavLink className={({ isActive }) => isActive ? 'btn btn-sm bg-[#e6e1e1]' : 'bg-transparent border-0 btn btn-sm'} to={"/addItems"}>
-                Add Craft Items
+                Add Arts & Crafts
             </NavLink>
         </li>
 
         <li>
             <NavLink className={({ isActive }) => isActive ? 'btn btn-sm bg-[#e6e1e1]' : 'bg-transparent border-0 btn btn-sm'} to={"/myItems"}>
-                My Arts & Craft Items
+                My Arts & Crafts
             </NavLink>
         </li>
     </>
