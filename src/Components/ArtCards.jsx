@@ -15,7 +15,7 @@ const ArtCards = ({ singleArtData }) => {
         <>
             {/* Card */}
             <div className="bg-base-100 shadow-md p-2 hover:scale-105 hover:shadow-2xl" >
-                <figure className="w-full "><img className="object-cover h-32 md:h-32 lg:h-48 w-full" src={image} alt="" />
+                <figure className="w-full "><img className="object-cover h-32 md:h-32 lg:h-36 w-full" src={image} alt="" />
                 <h1 className={`font-medium text-xs flex justify-center items-center rounded-sm bg-[#1a1919] text-white px-1 py-0.5}`}>
                             {stock_status}
                         </h1>

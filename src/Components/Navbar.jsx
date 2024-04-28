@@ -43,7 +43,7 @@ const Navbar = () => {
         </li>
     </>
     return (
-        <div className="navbar px-5 bg-base-100">
+        <div className="navbar bg-base-100">
             <div className="navbar-start">
                 <div className="dropdown z-30">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -68,19 +68,19 @@ const Navbar = () => {
                                 <img className="h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 border rounded-full " src={user.photoURL || "/Capture.PNG"} alt="" />
                             </div>
                             <Tooltip id="my-tooltip" />
-                            <button onClick={handleSignOut} className="btn btn-sm bg-[#333333] hover:bg-slate-500 text-white">Logout</button>
+                            <button onClick={handleSignOut} className="btn btn-xs md:btn-sm lg:btn-sm bg-[#333333] hover:bg-slate-500 text-white">Logout</button>
                         </div>
                         : <div className="flex items-center gap-2 md:gap-2 lg:gap-4">
                             <div data-tooltip-id="my-tooltip" data-tooltip-content="No Image" data-tooltip-place="left">
                                 <img className="rounded-full h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 border" src="/Capture.PNG" alt="" />
-                            </div>
+                            </div><Tooltip id="my-tooltip" />
                             <div className="flex">
                                 <NavLink
-                                    className="btn btn-sm text-white bg-[#333333] hover:bg-slate-400" to={"/login"}>
+                                    className="btn btn-xs md:btn-sm lg:btn-sm text-white bg-[#333333] hover:bg-slate-400" to={"/login"}>
                                     Login
                                 </NavLink>
                                 <NavLink
-                                    className="btn btn-sm text-white bg-[#333333] hover:bg-slate-400" to={"/register"}>
+                                    className="btn btn-xs md:btn-sm lg:btn-sm text-white bg-[#333333] hover:bg-slate-400" to={"/register"}>
                                     Register
                                 </NavLink>
                             </div>

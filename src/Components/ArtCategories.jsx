@@ -10,7 +10,7 @@ const ArtCategories = ({ singleArtData }) => {
                 <img
                     src={image}
                     alt=""
-                    className="w-full h-44 rounded shadow-sm bg-gray-500 dark:bg-gray-500 aspect-square filter brightness-50"
+                    className="w-full h-32 object-cover rounded shadow-sm bg-gray-500 dark:bg-gray-500 aspect-square filter brightness-50"
                 />
                 <span className="absolute inset-0 flex items-center justify-center text-white font-bold text-xl">
                     {subcategory_name}

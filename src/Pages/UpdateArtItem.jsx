@@ -42,7 +42,7 @@ const UpdateArtItem = () => {
         console.log(updatedCraftArts)
 
         // Update 
-        fetch(`http://localhost:5000/craftArts/${_id}`, {
+        fetch(`https://art-elysium-server-b9-a10.vercel.app/craftArts/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

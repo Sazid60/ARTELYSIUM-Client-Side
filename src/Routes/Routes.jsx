@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         {
             path: "/",
             element: <Home></Home>,
-            loader :()=> fetch('http://localhost:5000/craftArts')
+            loader :()=> fetch('https://art-elysium-server-b9-a10.vercel.app/craftArts')
         },
         {
             path: "/login",
@@ -37,17 +37,17 @@ const router = createBrowserRouter([
         {
             path: "/allItems",
             element: <AllItems></AllItems>,
-            loader :()=> fetch('http://localhost:5000/craftArts')
+            loader :()=> fetch('https://art-elysium-server-b9-a10.vercel.app/craftArts')
         },
         {
             path: "/craftArts/:id",
             element: <PrivateRoutes><DetailsArtCard></DetailsArtCard></PrivateRoutes>,
-            loader :({params})=> fetch(`http://localhost:5000/craftArts/${params.id}`)
+            loader :({params})=> fetch(`https://art-elysium-server-b9-a10.vercel.app/craftArts/${params.id}`)
         },
         {
             path: "/craftArtsUpdate/:id",
             element: <PrivateRoutes><UpdateArtItem></UpdateArtItem></PrivateRoutes>,
-            loader :({params})=> fetch(`http://localhost:5000/craftArts/${params.id}`)
+            loader :({params})=> fetch(`https://art-elysium-server-b9-a10.vercel.app/craftArts/${params.id}`)
         },
         {
             path: "/addItems",
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
         {
             path: "/categorizedData/:id",
             element: <CategorizedData></CategorizedData>,
-            loader : ({params})=> fetch(`http://localhost:5000/categorizedData/${params.id}`)
+            loader : ({params})=> fetch(`https://art-elysium-server-b9-a10.vercel.app/categorizedData/${params.id}`)
         },
       ]
     },

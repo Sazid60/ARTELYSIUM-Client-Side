@@ -36,32 +36,32 @@ const Banner = () => {
                     className="mySwiper">
 
                     <SwiperSlide>
-                        <div className='bg-[url(/L_mountain.jpg)] bg-cover bg-center bg-no-repeat h-[140px] md:h-[300px] lg:h-[420px] w-full'>
+                        <div className='bg-[url(/L_mountain.jpg)] bg-cover bg-center bg-no-repeat h-[140px] md:h-[300px] lg:h-[400px] w-full'>
                             <div className='absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-60'></div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='bg-[url(/O_face.jpeg)] bg-cover bg-center bg-no-repeat h-[140px] md:h-[300px] lg:h-[420px] w-full'>
+                        <div className='bg-[url(/O_face.jpeg)] bg-cover bg-center bg-no-repeat h-[140px] md:h-[300px] lg:h-[400px] w-full'>
                             <div className='absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-60'></div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='bg-[url(/P_Acrylic_Potrait.jpg)] bg-cover bg-center bg-no-repeat h-[140px] md:h-[300px] lg:h-[420px] w-full'>
+                        <div className='bg-[url(/P_Acrylic_Potrait.jpg)] bg-cover bg-center bg-no-repeat h-[140px] md:h-[300px] lg:h-[400px] w-full'>
                             <div className='absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-60'></div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='bg-[url(/W_animals.jpg)] bg-cover bg-center bg-no-repeat h-[140px] md:h-[300px] lg:h-[420px] w-full'>
+                        <div className='bg-[url(/W_animals.jpg)] bg-cover bg-center bg-no-repeat h-[140px] md:h-[300px] lg:h-[400px] w-full'>
                             <div className='absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-60'></div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='bg-[url(/C_architectural.jpg)] bg-cover bg-center bg-no-repeat h-[140px] md:h-[300px] lg:h-[420px] w-full'>
+                        <div className='bg-[url(/C_architectural.jpg)] bg-cover bg-center bg-no-repeat h-[140px] md:h-[300px] lg:h-[400px] w-full'>
                             <div className='absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-60'></div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='bg-[url(/CR_superhero.jpg)] bg-cover bg-center bg-no-repeat h-[140px] md:h-[300px] lg:h-[420px] w-full'>
+                        <div className='bg-[url(/CR_superhero.jpg)] bg-cover bg-center bg-no-repeat h-[140px] md:h-[300px] lg:h-[400px] w-full'>
                             <div className='absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-60'></div>
                         </div>
                     </SwiperSlide>

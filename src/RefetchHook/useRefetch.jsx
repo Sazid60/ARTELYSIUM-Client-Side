@@ -12,7 +12,7 @@ const useRefetch = (id) => {
 
     useEffect(() => {
         setLoading(true)
-        fetch(`http://localhost:5000/craftArts/${id}`)
+        fetch(`https://art-elysium-server-b9-a10.vercel.app/craftArts/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)

@@ -25,7 +25,7 @@ const AddItems = () => {
 
         const newCraftArts = { image, item_name, subcategory_name, price, rating, customization, description, processing_time, stock_status, user_email, user_name }
 
-        fetch('http://localhost:5000/craftArts', {
+        fetch('https://art-elysium-server-b9-a10.vercel.app/craftArts', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
