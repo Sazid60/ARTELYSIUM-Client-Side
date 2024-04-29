@@ -68,7 +68,7 @@ const Navbar = () => {
                 <div className="flex justify-center items-center gap-4">
                     <Link to={"/"} className="font-bold text-2xl md:text-3xl lg:text-4xl ">ArtElysium</Link>
                     <div>
-                        <div className="flex justify-center items-center mt-4  ">
+                        <div className="flex justify-center items-center  ">
                             <label className="swap swap-rotate ">
 
 
