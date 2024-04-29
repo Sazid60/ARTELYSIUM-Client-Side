@@ -28,7 +28,7 @@ const AllArtTable = ({ loadedCards }) => {
           </thead>
           {
             loadedCards.map(singleCard => <tbody key={singleCard._id}>
-              <tr className="border-b border-opacity-20 dark:border-gray-300 dark:bg-gray-50">
+              <tr className="border-b border-opacity-20 ">
                 <td className="p-1 lg:p-3  max-w-[80px] lg:max-w-full">
                   <p>{singleCard.item_name}</p>
                 </td>

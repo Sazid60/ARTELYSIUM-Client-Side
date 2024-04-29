@@ -3,10 +3,15 @@ import Banner from "../Components/Banner";
 import ArtCards from "../Components/ArtCards";
 import ArtCategories from "../Components/ArtCategories";
 import { FaStar } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 
 const Home = () => {
     const loadedCards = useLoaderData()
+
+
+
+    
     // console.log(loadedCards)
     const nonRepeatedCategory = loadedCards.filter((art_categories, index, self) =>
         index === self.findIndex((a) => (
@@ -46,39 +51,39 @@ const Home = () => {
                 <div className=" mb-6 lg:px-28">
                     <div className="flex flex-col  md:flex-row lg:flex-row justify-center p-4  items-center gap-5 md:gap-5 lg:gap-10 ">
                         <div className="shadow-2xl">
-                            <img src="/Exehibition-1.jpg" className="h-52 w-64  shadow-xl" alt="" />
+                            <img src="/Exehibition-1.jpg" className="h-32 w-48  shadow-xl" alt="" />
                         </div>
                         <div className="text-center md:text-left lg:text-left">
-                            <p className="text-xs md:text-sm lg:text-lg mb-2 lg:mb-4 text-[#4169E1] font-bold">12 March 2024</p>
-                            <h1 className="text-sm md:text-lg lg:text-xl font-semibold mb-3">Peasant Scenes And Landscapes</h1>
-                            <p className="text-xs md:text-sm  lg:text-lg italic">The exhibition is made possible by the Laura & C. Arnold Douglas Foundation.</p>
+                            <p className="text-xs md:text-sm lg:text-sm mb-2 lg:mb-4 text-[#4169E1] font-semibold">12 March 2024</p>
+                            <h1 className="text-sm md:text-sm lg:text-lg font-bold mb-3">Peasant Scenes And Landscapes</h1>
+                            <p className="text-xs md:text-sm  lg:text-sm italic">The exhibition is made possible by the Laura & C. Arnold Douglas Foundation.</p>
                         </div>
-                    </div> <hr className="my-4 lg:mx-56 border " />
+                    </div> <hr className="my-4 lg:mx-72 border " />
 
                     <div className="flex flex-col-reverse  md:flex-row lg:flex-row justify-center p-4  items-center gap-5 md:gap-5 lg:gap-10 ">
 
-                    <div className="text-center md:text-left lg:text-left">
-                            <p className="text-xs md:text-sm lg:text-lg mb-2 lg:mb-4 text-[#4169E1] font-bold">26 August 2023</p>
-                            <h1 className="text-sm md:text-lg lg:text-xl font-semibold mb-3">Rojo Y Negro - Latin American Art</h1>
-                            <p className="text-xs md:text-sm  lg:text-lg italic">The exhibition is made possible by the John & Jane Doe & MJ Foundation.</p>
+                        <div className="text-center md:text-left lg:text-left">
+                            <p className="text-xs md:text-sm lg:text-sm mb-2 lg:mb-4 text-[#4169E1] font-semibold">26 August 2023</p>
+                            <h1 className="text-sm md:text-sm lg:text-lg font-bold mb-3">Rojo Y Negro - Latin American Art</h1>
+                            <p className="text-xs md:text-sm  lg:text-sm italic">The exhibition is made possible by the John & Jane Doe & MJ Foundation.</p>
                         </div>
                         <div className="shadow-2xl">
-                            <img src="/Exehibition-2.jpg" className="h-52 w-64  shadow-xl" alt="" />
+                            <img src="/Exehibition-2.jpg" className="h-32 w-48   shadow-xl" alt="" />
                         </div>
-                    </div> <hr className="my-4 lg:mx-56 border " />
+                    </div> <hr className="my-4 lg:mx-72 border " />
 
                     <div className="flex flex-col  md:flex-row lg:flex-row justify-center p-4  items-center gap-5 md:gap-5 lg:gap-10 ">
                         <div className="shadow-2xl">
-                            <img src="/Exehibition-3.jpg" className="h-52 w-64 shadow-xl" alt="" />
+                            <img src="/Exehibition-3.jpg" className="h-32 w-48  shadow-xl" alt="" />
                         </div>
                         <div className="text-center md:text-left lg:text-left">
-                            <p className="text-xs md:text-sm lg:text-lg mb-2 lg:mb-4 text-[#4169E1] font-bold">12 June 2023</p>
-                            <h1 className="text-sm md:text-lg lg:text-xl font-semibold mb-3">Naive Painting Of The 19th Century</h1>
-                            <p className="text-xs md:text-sm  lg:text-lg italic">The exhibition is made possible by the Sic Mondus Creatos Est Corporation.</p>
+                            <p className="text-xs md:text-sm lg:text-sm mb-2 lg:mb-4 text-[#4169E1] font-semibold">12 June 2023</p>
+                            <h1 className="text-sm md:text-sm lg:text-lg font-bold mb-3">Naive Painting Of The 19th Century</h1>
+                            <p className="text-xs md:text-sm  lg:text-sm italic">The exhibition is made possible by the Sic Mondus Creatos Est Corporation.</p>
                         </div>
-                    </div><hr className="my-4 lg:mx-56 border " />
+                    </div><hr className="my-4 lg:mx-72 border " />
                 </div>
-            </div> 
+            </div>
 
             <div>
                 <h1 className="text-center text-2xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3">What Clients Says About Us</h1>
@@ -104,7 +109,7 @@ const Home = () => {
                                         <span className="text-sm md:text-lg lg:text-xl font-bold">5.0</span>
                                     </div>
                                 </div>
-                                <div className="p-2 lg:p-4 space-y-2 text-xs ">
+                                <div className="p-2 lg:p-4 space-y-2 text-xs md:text-sm lg:text-sm ">
                                     <p className="">The charcoal artwork I received expectations, capturing intricate details and evoking emotions beautifully.</p>
                                 </div>
                             </div>
@@ -125,7 +130,7 @@ const Home = () => {
                                         <span className="text-sm md:text-lg lg:text-xl font-bold">4.5</span>
                                     </div>
                                 </div>
-                                <div className="p-2 lg:p-4 space-y-2 text-xs">
+                                <div className="p-2 lg:p-4 space-y-2 text-xs md:text-sm lg:text-sm">
                                     <p className="">Oil painting colors are details are incredibly lifelike. It's the perfect addition to my collection.</p>
                                 </div>
                             </div>

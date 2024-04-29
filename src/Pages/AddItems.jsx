@@ -54,7 +54,7 @@ const AddItems = () => {
             <h1 className="text-center text-2xl md:text-2xl lg:text-3xl  font-bold mt-3" >Add Art & Craft</h1>
             <p className="text-center  text-xs md:text-lg lg:text-lg max-w-2xl mx-auto mt-2 mb-3" >Bring your ideas to life with our quality craft supplies!</p>
             <form onSubmit={handleAdd}>
-                {/* Image and item name */}
+                
                 <div className="md:flex mb-2 md:mb-4 lg:mb-4">
                     <div className="form-control md:w-1/2">
                         <label className="label">
@@ -73,7 +73,7 @@ const AddItems = () => {
                         </label>
                     </div>
                 </div>
-                {/* Subcategory, price, rating, and customization */}
+               
                 <div className="md:flex mb-2 md:mb-4 lg:mb-4">
                     <div className="form-control md:w-1/4 relative">
                         <label className="label">
@@ -123,7 +123,7 @@ const AddItems = () => {
 
 
                 </div>
-                {/* Short Description */}
+                
                 <div className="md:flex mb-2 md:mb-4 lg:mb-4">
                     <div className="form-control w-full">
                         <label className="label">
@@ -134,7 +134,7 @@ const AddItems = () => {
                         </label>
                     </div>
                 </div>
-                {/* Processing time and stock status */}
+                
                 <div className="md:flex mb-2 md:mb-4 lg:mb-4">
                     <div className="form-control md:w-1/2">
                         <label className="label">
@@ -158,7 +158,7 @@ const AddItems = () => {
                         </div>
                     </div>
                 </div>
-                {/* User email and name */}
+                
                 <div className="md:flex mb-2 md:mb-4 lg:mb-4">
                     <div className="form-control md:w-1/2">
                         <label className="label">

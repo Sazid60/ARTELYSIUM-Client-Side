@@ -27,19 +27,19 @@ const CategorizedData = () => {
                                 </figure>
                                 <div className="p-2">
                                     <div>
-                                        <h2 className="font-bold text-lg  mb-2 text-[#333333]">{singleArtData.item_name}</h2>
+                                        <h2 className="font-bold text-lg  mb-2 ">{singleArtData.item_name}</h2>
                                         <h2 className="font-medium text-xs lg:text-sm mb-4">Category : {singleArtData.subcategory_name}</h2>
 
                                         <div className="flex items-center justify-between mb-4">
-                                            <p className=" text-sm text-[#333333] flex items-center gap-1 "><span className="text-black font-bold">Price : </span> <span className="font-bold">{singleArtData.price} BDT</span> </p>
+                                            <p className=" text-sm  flex items-center gap-1 "><span className=" font-bold">Price : </span> <span className="font-bold">{singleArtData.price} BDT</span> </p>
                                             <h1 className={`font-medium text-xs flex justify-center items-center rounded-sm px-1 py-0.5}`}>
                                                 Customization : {singleArtData.customization}
                                             </h1>
                                         </div>
                                     </div>
                                     <div className="flex justify-between mb-4 mt-2 text-center">
-                                        <p className="font-semibold text-xs flex items-center gap-1 "><span className="text-black font-bold">Processing Time :</span>{singleArtData.processing_time} Days</p>
-                                        <p className="font-bold text-xs  flex items-center gap-1 "><span className="text-black">{singleArtData.rating}</span><FaStar className="text-amber-300" /></p>
+                                        <p className="font-semibold text-xs flex items-center gap-1 "><span className=" font-bold">Processing Time :</span>{singleArtData.processing_time} Days</p>
+                                        <p className="font-bold text-xs  flex items-center gap-1 "><span className="">{singleArtData.rating}</span><FaStar className="text-amber-300" /></p>
                                     </div>
                                     <div className="flex gap-2 mb-2 mt-2 text-center">
 
