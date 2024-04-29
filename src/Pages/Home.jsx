@@ -3,15 +3,11 @@ import Banner from "../Components/Banner";
 import ArtCards from "../Components/ArtCards";
 import ArtCategories from "../Components/ArtCategories";
 import { FaStar } from "react-icons/fa";
-import { useEffect, useState } from "react";
 
 
 const Home = () => {
     const loadedCards = useLoaderData()
 
-
-
-    
     // console.log(loadedCards)
     const nonRepeatedCategory = loadedCards.filter((art_categories, index, self) =>
         index === self.findIndex((a) => (
