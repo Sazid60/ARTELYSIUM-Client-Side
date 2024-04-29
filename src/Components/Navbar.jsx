@@ -66,7 +66,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="flex justify-center items-center gap-4">
-                    <Link to={"/"} className="font-bold text-2xl md:text-3xl lg:text-4xl ">ArtElysium</Link>
+                    <Link to={"/"} className="font-bold text-2xl md:text-3xl lg:text-4xl ">ARTElYSIUM</Link>
                     <div className="hidden lg:block">
                         <div className="flex justify-center items-center ">
                             <label className="swap swap-rotate ">
