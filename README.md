@@ -54,4 +54,4 @@ ARTELYSIUM is all about arts & crafts. This website represents some fine artwork
 2. [React-Tooltip](https://react-tooltip.com/) : Used In Navbar Profile Image, When You hover Profile Image It Will Show User Name If Name Is Available.
 3. [Swiper-slider](https://swiperjs.com/) : Applied In Home Page Banner Section Which Changes Images In Infinite Order.
 4. [React-Sweet-Alert](https://sweetalert2.github.io/) : Applied On Successful Art Adding, Deleting a Product, Updating a Product. 
-5. [React-Spinner](https://www.npmjs.com/package/react-spinners) : Added To Show Loading Sate
+5. [React-Spinner](https://www.npmjs.com/package/react-spinners) : Added To Show Loading Sate.
