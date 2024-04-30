@@ -21,7 +21,7 @@ ARTELYSIUM is all about arts & crafts. This website represents some fine artwork
 
 #####  Pages & Sections Specification: 
 
-- Home Page: Contains Navbar, Banner(AutoPlay Images & Typewriter), Arts & Crafts, Art & Craft Categories, Events & Programs, Reviews & Footer.
+- Home Page: Contains Navbar, Banner(AutoPlay Images & Typewriter), Arts & Crafts, Art & Craft Categories, Events & Programs(Extra Section), Reviews(Extra Section) & Footer.
 
 - Arts & Crafts Section : This Section Contains 6 Art Cards of Recently Added Cards From Database. And By Clicking The View Details Button User Can Go To The Art Details Page(Private Route)
 
@@ -39,7 +39,7 @@ ARTELYSIUM is all about arts & crafts. This website represents some fine artwork
 
 - All Arts & Crafts Page : This Page Shows All The Art Information Added By All Users In Table Format, Besides There is a View Details Button Which Allows User To Go To Specific Art Details(user must be logged in).
 
-- Add Arts & Crafts Page : This Page Takes All Art Information and Adds Data to The Database Which Passes The Data to All The Pages. After Adding a Successful Modal Type Alert Is Show.
+- Add Arts & Crafts Page : This Page Takes All Art Information and Adds Data to The Database Which Passes The Data to All The Pages. After Adding a Successful Modal Type Alert Is Shown.
 
 - My Arts & Crafts Page : In This Page Data From Database Is Sorted By User Email Address and Shown In The Page. This Page Only Shows User Specific Added Data(Including Update & Delete Button). In The Top Of The Page Sort By Customize Option Added.
 
@@ -51,5 +51,7 @@ ARTELYSIUM is all about arts & crafts. This website represents some fine artwork
 ### NPM Packages Used:
 
 1. [React-Simple-Typewriter](https://www.npmjs.com/package/react-simple-typewriter) : Applied In The Banner Section Which Shows All The Subcategories.
-2. [Swiper-slider](https://swiperjs.com/) : Applied In Home Page Banner Section Which Changes Images In Infinite Order.
-3. [React-Tooltip](https://react-tooltip.com/) : Used In Navbar Profile Image, When You hover Profile Image It Will Show User Name If Name Is Available.
+2. [React-Tooltip](https://react-tooltip.com/) : Used In Navbar Profile Image, When You hover Profile Image It Will Show User Name If Name Is Available.
+3. [Swiper-slider](https://swiperjs.com/) : Applied In Home Page Banner Section Which Changes Images In Infinite Order.
+4. [React-Sweet-Alert](https://sweetalert2.github.io/) : Applied On Successful Art Adding, Deleting a Product, Updating a Product. 
+5. [React-Spinner](https://www.npmjs.com/package/react-spinners) : Added To Show Loading Sate
