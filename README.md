@@ -57,7 +57,7 @@ ARTELYSIUM is all about arts & crafts. This website represents some fine artwork
 4. [React-Sweet-Alert](https://sweetalert2.github.io/) : Applied On Successful Art Adding, Deleting a Product, Updating a Product. 
 5. [React-Spinner](https://www.npmjs.com/package/react-spinners) : Added To Show Loading Sate.
 
-### Instructiosn For Locally Running The Project :
+### Instructiosn For Locally Running The Project:
 - Clone The Repository " git clone <repository-url> "
 - Install All The Dependecies " npm intall "
 - Create a .env file in the root directory of the project and add the required fields.
