@@ -57,6 +57,9 @@ ARTELYSIUM is all about arts & crafts. This website represents some fine artwork
 4. [React-Sweet-Alert](https://sweetalert2.github.io/) : Applied On Successful Art Adding, Deleting a Product, Updating a Product. 
 5. [React-Spinner](https://www.npmjs.com/package/react-spinners) : Added To Show Loading Sate.
 
+### Technologies used : 
+React.js | HTML5 | Tailwind CSS | Daisy UI | Node.js | Express.js | MongoDB | Firebase
+
 ### Instructiosn For Locally Running The Project:
 - Clone The Repository " git clone <repository-url> "
 - Install All The Dependecies " npm intall "
