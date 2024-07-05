@@ -17,7 +17,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <div>
+            <div id="allArts" >
                 <h1 className="text-center text-2xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3"> Arts & Crafts</h1>
                 <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto" >Dive in, explore, and let your imagination soar as you bring your ideas to life!</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6 mt-4 lg:px-28">
@@ -26,7 +26,7 @@ const Home = () => {
                     }
                 </div>
             </div>
-            <div>
+            <div id="categories" >
                 <h1 className="text-center text-2xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3"> Art & Craft Categories</h1>
                 <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto" >Choose a category and immerse in its world, treasures waiting to be discovered</p>
                 <div className=" mb-6 mt-4 lg:px-28">
@@ -81,14 +81,14 @@ const Home = () => {
                 </div>
             </div>
 
-            <div>
+            {/* <div>
                 <h1 className="text-center text-2xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3">What Clients Says About Us</h1>
                 <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto" >Discover why our clients rave about our service and products in their own words.</p>
                 <div className=" mb-6 mt-4 lg:px-28">
                     <section className=" 0">
 
                         <div className="container grid grid-cols-1 md:grid-cols-2 gap-4 p-4 mx-auto lg:grid-cols-2">
-                            {/* card */}
+                            
                             <div className="container flex flex-col w-full  p-2 lg:p-6 mx-auto divide-y rounded-md divide-gray-700 border shadow-xl">
                                 <div className="flex justify-between p-4">
                                     <div className="flex space-x-4">
@@ -109,7 +109,7 @@ const Home = () => {
                                     <p className="">The charcoal artwork I received expectations, capturing intricate details and evoking emotions beautifully.</p>
                                 </div>
                             </div>
-                            {/* card */}
+                          
                             <div className="container flex flex-col w-full max-w-lg p-2 lg:p-6 mx-auto divide-y rounded-md divide-gray-700 border shadow-xl">
                                 <div className="flex justify-between p-4">
                                     <div className="flex space-x-4">
@@ -134,7 +134,7 @@ const Home = () => {
                         </div>
                     </section>
                 </div>
-            </div>
+            </div> */}
 
         </div>
     );
