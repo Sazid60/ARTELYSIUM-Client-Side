@@ -4,7 +4,8 @@
 
 ### CATEGORY : Painting and Drawing
 
-Website URL: [https://artelysium-client-b9a10.web.app/](https://artelysium-client-b9a10.web.app/)
+#### Website URL: [https://artelysium-client-b9a10.web.app/](https://artelysium-client-b9a10.web.app/)
+#### Server-Side Repository: https://github.com/Sazid60/ARTELYSIUM-Server-Side
 
 #### Overview:
 ARTELYSIUM is all about arts & crafts. This website represents some fine artworks. User see added art works added by different persons. User can see categorized data. A person can create artwork selling card. Moreover he can see his added arts, as well as he can delete & update his art information. User can access private pages(add arts, My Arts, Art Details).This website is responsive for all devices and available for dark and light mode toggling. All data are stored in Database. 
@@ -55,3 +56,14 @@ ARTELYSIUM is all about arts & crafts. This website represents some fine artwork
 3. [Swiper-slider](https://swiperjs.com/) : Applied In Home Page Banner Section Which Changes Images In Infinite Order.
 4. [React-Sweet-Alert](https://sweetalert2.github.io/) : Applied On Successful Art Adding, Deleting a Product, Updating a Product. 
 5. [React-Spinner](https://www.npmjs.com/package/react-spinners) : Added To Show Loading Sate.
+
+### Technologies used : 
+React.js | HTML5 | Tailwind CSS | Daisy UI | Node.js | Express.js | MongoDB | Firebase
+
+### Instructiosn For Locally Running The Project:
+- Clone The Repository " git clone <repository-url> "
+- Install All The Dependecies " npm intall "
+- Create a .env file in the root directory of the project and add the required fields.
+- Customize .env variables according to your specific environment setup.
+- Ensure Node.js and npm (or yarn) are installed on your system.
+- For Further Guidence You Can Connect me and ask any queries.
