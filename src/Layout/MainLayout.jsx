@@ -6,9 +6,9 @@ import { Toaster } from "react-hot-toast";
 const MainLayout = () => {
     return (
         <div>
-            <div className='container mx-auto '>
+            <div className=' '>
                 <Navbar></Navbar>
-                <div className=' container mx-auto px-5'>
+                <div className='  px-5'>
                     <Outlet></Outlet>
                 </div>
             </div>

@@ -82,7 +82,7 @@ const MyItems = () => {
             {
                 (loadedData.length < 1 || filteredData.length < 1) && <p className="lg:px-28 text-center font-bold text-xl">No Data Available</p>
             }
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6 mt-4 lg:px-28">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-6 mt-4 lg:px-28">
                 {
                     filteredData.map(singleArtData => <div key={singleArtData._id} className="bg-base-100 shadow-md p-2 hover:scale-105 hover:shadow-2xl" >
                         <figure className="w-full ">
