@@ -68,7 +68,7 @@ const MyItems = () => {
     // const displayedData = showAll ? filteredData : filteredData.slice(0, 9);
     return (
         <>
-            <h1 className="text-center text-2xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3">My Carts & Arts</h1>
+            <h1 className="text-center text-2xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3 underline uppercase">My Carts & Arts</h1>
             <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto" >Easily update your listings with new images, descriptions, prices, and more. Keep your collection fresh and engaging with just a few clicks.</p>
 
             <div className="dropdown dropdown-hover mt-3 lg:px-28 ">

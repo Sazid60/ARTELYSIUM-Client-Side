@@ -18,7 +18,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <div id="allArts" >
-                <h1 className="text-center text-2xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3"> Arts & Crafts</h1>
+                <h1 className="text-center text-2xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3 underline uppercase"> Arts & Crafts</h1>
                 <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto" >Dive in, explore, and let your imagination soar as you bring your ideas to life!</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 mb-6 mt-4">
                     {
@@ -27,11 +27,11 @@ const Home = () => {
                 </div>
             </div>
             <div id="categories" >
-                <h1 className="text-center text-2xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3"> Art & Craft Categories</h1>
+                <h1 className="text-center text-2xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3 underline uppercase"> Art & Craft Categories</h1>
                 <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto" >Choose a category and immerse in its world, treasures waiting to be discovered</p>
-                <div className=" mb-6 mt-4 lg:px-28">
+                <div className=" mb-6 mt-4 ">
                     <section className=" 0">
-                        <div className="container grid grid-cols-1 md:grid-cols-2 gap-4 p-4 mx-auto lg:grid-cols-3">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 lg:grid-cols-3">
                             {nonRepeatedCategory.map((singleArtData) => (
                                 <ArtCategories key={singleArtData._id} singleArtData={singleArtData} />
                             ))}
@@ -42,12 +42,12 @@ const Home = () => {
 
 
             <div>
-                <h1 className="text-center text-2xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3">Events & Programs</h1>
+                <h1 className="text-center text-2xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3 underline uppercase">Events & Programs</h1>
                 <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto" >Discover The Successful Events and Programs Organized By Us</p>
-                <div className=" mb-6 lg:px-28">
+                <div className=" mb-6">
                     <div className="flex flex-col  md:flex-row lg:flex-row justify-center p-4  items-center gap-5 md:gap-5 lg:gap-10 ">
                         <div className="shadow-2xl">
-                            <img src="/Exehibition-1.jpg" className="h-32 w-48  shadow-xl" alt="" />
+                            <img src="/Exehibition-1.jpg" className="h-60 md:h-72 xl:h-96 w-auto  shadow-xl" alt="" />
                         </div>
                         <div className="text-center md:text-left lg:text-left">
                             <p className="text-xs md:text-sm lg:text-sm mb-2 lg:mb-4 text-[#4169E1] font-semibold">12 March 2024</p>
@@ -64,13 +64,13 @@ const Home = () => {
                             <p className="text-xs md:text-sm  lg:text-sm italic">The exhibition is made possible by the John & Jane Doe & MJ Foundation.</p>
                         </div>
                         <div className="shadow-2xl">
-                            <img src="/Exehibition-2.jpg" className="h-32 w-48   shadow-xl" alt="" />
+                            <img src="/Exehibition-2.jpg" className="h-60 md:h-72 xl:h-96 w-auto  shadow-xl" alt="" />
                         </div>
                     </div> <hr className="my-4 lg:mx-72 border " />
 
                     <div className="flex flex-col  md:flex-row lg:flex-row justify-center p-4  items-center gap-5 md:gap-5 lg:gap-10 ">
                         <div className="shadow-2xl">
-                            <img src="/Exehibition-3.jpg" className="h-32 w-48  shadow-xl" alt="" />
+                            <img src="/Exehibition-3.jpg" className="h-60 md:h-72 xl:h-96 w-auto  shadow-xl" alt="" />
                         </div>
                         <div className="text-center md:text-left lg:text-left">
                             <p className="text-xs md:text-sm lg:text-sm mb-2 lg:mb-4 text-[#4169E1] font-semibold">12 June 2023</p>

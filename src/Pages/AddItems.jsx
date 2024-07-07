@@ -51,7 +51,7 @@ const AddItems = () => {
 
     return (
         <>
-            <h1 className="text-center text-2xl md:text-2xl lg:text-3xl  font-bold mt-3" >Add Art & Craft</h1>
+            <h1 className="text-center text-2xl md:text-2xl lg:text-3xl  font-bold mt-3 underline uppercase" >Add Art & Craft</h1>
             <p className="text-center  text-xs md:text-lg lg:text-lg max-w-2xl mx-auto mt-2 mb-3" >Bring your ideas to life with our quality craft supplies!</p>
             <form onSubmit={handleAdd}>
                 
