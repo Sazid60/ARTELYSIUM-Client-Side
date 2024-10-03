@@ -13,7 +13,7 @@ const DetailsArtCard = () => {
     return (
         <div className="flex flex-col  justify-around item gap-6 mt-4 min-h-full">
 
-            <div className='relative h-[155px] md:h-[310px] lg:h-[350px] w-full'>
+            <div className='relative h-[155px] md:h-[310px] lg:h-[600px] w-full'>
                 <div className='flex justify-center items-center absolute inset-0 bg-cover bg-center bg-no-repeat '>
                     <img src={image} className=" shadow-2xl w-full h-full object-cover" alt="No Image" />
                 </div>

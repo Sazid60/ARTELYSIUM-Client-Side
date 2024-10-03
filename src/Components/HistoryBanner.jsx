@@ -60,10 +60,10 @@ const HistoryBanner = () => {
 
     return (
         <div className="bg-[#F5F5F5] py-5 xl:py-10">
-            <h2 className="text-center text-xl md:text-2xl lg:text-3xl font-bold underline uppercase mb-2">Our Artista History</h2>
+            <h2 className="text-center text-xl md:text-2xl lg:text-3xl font-bold underline uppercase  mb-1 md:mb-2 lg:mb-4">Our Artista History</h2>
             {/* <h2 className="text-center text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-8xl font-bold leading-tight underline uppercase">Our Artista History</h2> */}
 
-            <p className="text-center text-xs md:text-lg lg:text-lg  mb-3">
+            <p className="text-center text-xs md:text-lg lg:text-lg mb-3">
                 Journey through the rich tapestry of our artistic evolution!
             </p>
             <Swiper

@@ -3,6 +3,7 @@ import Banner from "../Components/Banner";
 import ArtCards from "../Components/ArtCards";
 import ArtCategories from "../Components/ArtCategories";
 import HistoryBanner from "../Components/HistoryBanner";
+import NewsCard from "../Components/NewsCard";
 
 
 const Home = () => {
@@ -14,128 +15,63 @@ const Home = () => {
             a.subcategory_name === art_categories.subcategory_name
         ))
     );
+
+    const newsData = [
+        {
+            id: 1,
+            title: "Major Tech Innovation",
+            description:
+                "A groundbreaking innovation in the tech industry is set to revolutionize how we interact with devices.",
+            date: "04",
+            month: "OCT",
+            author: "TechDaily",
+            imageUrl: "/News/home_blog-05.jpg",
+        },
+        {
+            id: 2,
+            title: "Global Markets Rise",
+            description:
+                "Global stock markets have seen a significant surge, driven by unexpected gains in the tech sector.",
+            date: "12",
+            month: "SEP",
+            author: "MarketWatch",
+            imageUrl: "/News/home_blog-06.jpg",
+        },
+    ];
+
     return (
         <div className="">
             <Banner></Banner>
             <HistoryBanner />
             <div id="allArts" >
-                    <h1 className="text-center text-2xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3 underline uppercase"> Arts & Crafts</h1>
-                    <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto" >Dive in, explore, and let your imagination soar as you bring your ideas to life!</p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 mb-6 mt-4">
-                        {
-                            loadedCards.slice(-8).reverse().map(singleArtData => <ArtCards key={singleArtData._id} singleArtData={singleArtData}></ArtCards>)
-                        }
-                    </div>
+                <h1 className="text-center text-xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3 underline uppercase">Popular Arts</h1>
+                <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto" >Dive in, explore, and let your imagination soar as you bring your ideas to life!</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 mb-6 mt-4">
+                    {
+                        loadedCards.slice(-8).reverse().map(singleArtData => <ArtCards key={singleArtData._id} singleArtData={singleArtData}></ArtCards>)
+                    }
                 </div>
-                <div id="categories" >
-                    <h1 className="text-center text-xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-3 mt-3 underline uppercase"> Top Categories</h1>
-                    <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto" >Choose a category and immerse in its world, treasures waiting to be discovered</p>
-                    <div className=" mb-6 mt-4 ">
-                        <section className=" 0">
-                            <div className="grid grid-cols-2 md:grid-cols-2 gap-3 xl:gap-3 lg:grid-cols-6 ">
-                                {nonRepeatedCategory.map((singleArtData) => (
-                                    <ArtCategories key={singleArtData._id} singleArtData={singleArtData} />
-                                ))}
-                            </div>
-                        </section>
-                    </div>
-                </div>
-
-
-                <div>
-                    <h1 className="text-center text-2xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3 underline uppercase">Events & Programs</h1>
-                    <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto" >Discover The Successful Events and Programs Organized By Us</p>
-                    <div className=" mb-6">
-                        <div className="flex flex-col  md:flex-row lg:flex-row justify-center p-4  items-center gap-5 md:gap-5 lg:gap-10 ">
-                            <div className="shadow-2xl">
-                                <img src="/Exehibition-1.jpg" className="h-60 md:h-72 xl:h-96 w-auto  shadow-xl" alt="" />
-                            </div>
-                            <div className="text-center md:text-left lg:text-left">
-                                <p className="text-xs md:text-sm lg:text-sm mb-2 lg:mb-4 text-[#4169E1] font-semibold">12 March 2024</p>
-                                <h1 className="text-sm md:text-sm lg:text-lg font-bold mb-3">Peasant Scenes And Landscapes</h1>
-                                <p className="text-xs md:text-sm  lg:text-sm italic">The exhibition is made possible by the Laura & C. Arnold Douglas Foundation.</p>
-                            </div>
-                        </div> <hr className="my-4 lg:mx-72 border " />
-
-                        <div className="flex flex-col-reverse  md:flex-row lg:flex-row justify-center p-4  items-center gap-5 md:gap-5 lg:gap-10 ">
-
-                            <div className="text-center md:text-left lg:text-left">
-                                <p className="text-xs md:text-sm lg:text-sm mb-2 lg:mb-4 text-[#4169E1] font-semibold">26 August 2023</p>
-                                <h1 className="text-sm md:text-sm lg:text-lg font-bold mb-3">Rojo Y Negro - Latin American Art</h1>
-                                <p className="text-xs md:text-sm  lg:text-sm italic">The exhibition is made possible by the John & Jane Doe & MJ Foundation.</p>
-                            </div>
-                            <div className="shadow-2xl">
-                                <img src="/Exehibition-2.jpg" className="h-60 md:h-72 xl:h-96 w-auto  shadow-xl" alt="" />
-                            </div>
-                        </div> <hr className="my-4 lg:mx-72 border " />
-
-                        <div className="flex flex-col  md:flex-row lg:flex-row justify-center p-4  items-center gap-5 md:gap-5 lg:gap-10 ">
-                            <div className="shadow-2xl">
-                                <img src="/Exehibition-3.jpg" className="h-60 md:h-72 xl:h-96 w-auto  shadow-xl" alt="" />
-                            </div>
-                            <div className="text-center md:text-left lg:text-left">
-                                <p className="text-xs md:text-sm lg:text-sm mb-2 lg:mb-4 text-[#4169E1] font-semibold">12 June 2023</p>
-                                <h1 className="text-sm md:text-sm lg:text-lg font-bold mb-3">Naive Painting Of The 19th Century</h1>
-                                <p className="text-xs md:text-sm  lg:text-sm italic">The exhibition is made possible by the Sic Mondus Creatos Est Corporation.</p>
-                            </div>
-                        </div><hr className="my-4 lg:mx-72 border " />
-                    </div>
-                </div>
-
-                {/* <div>
-                <h1 className="text-center text-2xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3">What Clients Says About Us</h1>
-                <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto" >Discover why our clients rave about our service and products in their own words.</p>
-                <div className=" mb-6 mt-4 lg:px-28">
+            </div>
+            <div id="categories" >
+                <h1 className="text-center text-xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3 underline uppercase"> Top Categories</h1>
+                <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto" >Choose a category and immerse in its world, treasures waiting to be discovered</p>
+                <div className=" mb-6 mt-4 ">
                     <section className=" 0">
-
-                        <div className="container grid grid-cols-1 md:grid-cols-2 gap-4 p-4 mx-auto lg:grid-cols-2">
-                            
-                            <div className="container flex flex-col w-full  p-2 lg:p-6 mx-auto divide-y rounded-md divide-gray-700 border shadow-xl">
-                                <div className="flex justify-between p-4">
-                                    <div className="flex space-x-4">
-                                        <div>
-                                            <img src="/reviewer-1.jpg" alt="" className="object-cover w-12 h-12 rounded-full bg-gray-500" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-sm lg:text-lg">Shahnawaz Sazid</h4>
-                                            <span className="text-xs ">2 days ago</span>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-center space-x-2 text-yellow-500">
-                                        <FaStar></FaStar>
-                                        <span className="text-sm md:text-lg lg:text-xl font-bold">5.0</span>
-                                    </div>
-                                </div>
-                                <div className="p-2 lg:p-4 space-y-2 text-xs md:text-sm lg:text-sm ">
-                                    <p className="">The charcoal artwork I received expectations, capturing intricate details and evoking emotions beautifully.</p>
-                                </div>
-                            </div>
-                          
-                            <div className="container flex flex-col w-full max-w-lg p-2 lg:p-6 mx-auto divide-y rounded-md divide-gray-700 border shadow-xl">
-                                <div className="flex justify-between p-4">
-                                    <div className="flex space-x-4">
-                                        <div>
-                                            <img src="/reviewer-2.jpg" alt="" className="object-cover w-12 h-12 rounded-full bg-gray-500" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold  text-sm lg:text-lg">Martha Kabir</h4>
-                                            <span className="text-xs ">5 days ago</span>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-center space-x-2 text-yellow-500">
-                                        <FaStar></FaStar>
-                                        <span className="text-sm md:text-lg lg:text-xl font-bold">4.5</span>
-                                    </div>
-                                </div>
-                                <div className="p-2 lg:p-4 space-y-2 text-xs md:text-sm lg:text-sm">
-                                    <p className="">Oil painting colors are details are incredibly lifelike. It's the perfect addition to my collection.</p>
-                                </div>
-                            </div>
-
+                        <div className="grid grid-cols-2 md:grid-cols-2 gap-3 xl:gap-3 lg:grid-cols-6 ">
+                            {nonRepeatedCategory.map((singleArtData) => (
+                                <ArtCategories key={singleArtData._id} singleArtData={singleArtData} />
+                            ))}
                         </div>
                     </section>
                 </div>
-            </div> */}
+            </div>
+            <h1 className="text-center text-xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3 underline uppercase">News</h1>
+            <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto" >Explore the headlines that matter and stay informed with our in-depth news coverage!</p>
+            <div className="grid grid-cols-1 md:grid-cols-2  max-w-5xl mx-auto mt-6">
+                {newsData.map((singleNews) => (
+                    <NewsCard key={singleNews._id} singleNews={singleNews} />
+                ))}
+            </div>
         </div>
     );
 };
