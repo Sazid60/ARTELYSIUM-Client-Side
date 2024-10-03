@@ -90,7 +90,7 @@ const Login = () => {
                             }
                         </div>
                         <div className="form-control mt-2" >
-                            <button className="btn text-white bg-[#333333] border-0 ">Login</button>
+                            <button className="btn text-white bg-[#CFAE7A] rounded-none hover:bg-yellow-700 border-0 ">Login</button>
                         </div>
                         <div className="mt-2 text-center">
                             <p className="text-sm text-gray-700 ">Do Not Have Account ? <Link className="text-blue-600 font-semibold" to={"/register"} state={location.state}>Register</Link> </p>

@@ -70,7 +70,7 @@ const DetailsArtCard = () => {
                     </table>
 
                     <div className="flex lg:justify-left gap-3">
-                        <Link to={`/allItems`}> <button className="btn btn-sm bg-[#FFECB3] mt-4 mb-6 text-black w-28">Explore More</button></Link>
+                        <Link to={`/allItems`}> <button className="x-2 py-1 xl:px-4 xl:py-1 bg-[#CFAE7A] text-white shadow-md hover:bg-yellow-700 transition text-[12px] sm:text-xs lg:text-base mt-4 mb-6">Explore More</button></Link>
                     </div>
                 </div>
             </div>

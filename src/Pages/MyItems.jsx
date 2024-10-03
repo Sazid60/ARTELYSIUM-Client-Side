@@ -72,7 +72,7 @@ const MyItems = () => {
             <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto" >Easily update your listings with new images, descriptions, prices, and more. Keep your collection fresh and engaging with just a few clicks.</p>
 
             <div className="dropdown dropdown-hover mt-3 lg:px-28 ">
-                <div tabIndex={0} role="button" className="btn btn-sm m-1 bg-[#333333] text-white rounded-none">SORT BY CUSTOMIZATION<span><FaAngleDown /></span></div>
+                <div tabIndex={0} role="button" className="btn btn-sm m-1 bg-[#CFAE7A] hover:bg-yellow-700 text-white rounded-none">SORT BY CUSTOMIZATION<span><FaAngleDown /></span></div>
                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                     <li onClick={() => setSortByCustomization(null)}><a>All</a></li>
                     <li onClick={() => setSortByCustomization("yes")}><a>Yes</a></li>

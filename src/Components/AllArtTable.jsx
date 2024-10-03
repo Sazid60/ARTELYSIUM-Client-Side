@@ -43,7 +43,7 @@ const AllArtTable = ({ loadedCards }) => {
                 </td>
                 <td className="py-2 lg:p-3  max-w-[60px] lg:max-w-full">
                   <span className="">
-                    <Link to={`/craftArts/${singleCard._id}`}><span className="text-[7px] md:text-[10px] lg:text-sm btn btn-xs bg-[#333333] text-white">Details</span></Link>
+                    <Link to={`/craftArts/${singleCard._id}`}><span className="text-[7px] md:text-[10px] lg:text-sm x-2 py-1 xl:px-4 xl:py-1 bg-[#CFAE7A] text-white shadow-md hover:bg-yellow-700 transition">Details</span></Link>
                   </span>
                 </td>
               </tr>

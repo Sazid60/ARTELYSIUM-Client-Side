@@ -130,7 +130,7 @@ const Register = () => {
                             }
                         </div>
                         <div className="form-control mt-2">
-                            <button className="btn  bg-[#333333] border-0 text-white">Register</button>
+                            <button className="btn  bg-[#CFAE7A] hover:bg-yellow-700 rounded border-0 text-white">Register</button>
                         </div>
                         <div className="mt-2 text-center">
                             <p className="text-gray-700 text-sm">Already Have Account ? <Link className="text-blue-600 font-semibold" to={"/login"}>Login</Link> </p>
