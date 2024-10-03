@@ -69,8 +69,8 @@ const DetailsArtCard = () => {
                         </tbody>
                     </table>
 
-                    <div className="flex lg:justify-center gap-3">
-                        <Link to={`/allItems`}> <button className="btn btn-sm bg-[#FFECB3] mt-4 mb-6 text-black w-28">Explore</button></Link>
+                    <div className="flex lg:justify-left gap-3">
+                        <Link to={`/allItems`}> <button className="btn btn-sm bg-[#FFECB3] mt-4 mb-6 text-black w-28">Explore More</button></Link>
                     </div>
                 </div>
             </div>
