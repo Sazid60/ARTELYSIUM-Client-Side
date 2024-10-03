@@ -28,11 +28,11 @@ const Home = () => {
                     </div>
                 </div>
                 <div id="categories" >
-                    <h1 className="text-center text-2xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3 underline uppercase"> Art & Craft Categories</h1>
+                    <h1 className="text-center text-xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-3 mt-3 underline uppercase"> Top Categories</h1>
                     <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto" >Choose a category and immerse in its world, treasures waiting to be discovered</p>
                     <div className=" mb-6 mt-4 ">
                         <section className=" 0">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 lg:grid-cols-3">
+                            <div className="grid grid-cols-2 md:grid-cols-2 gap-3 xl:gap-3 lg:grid-cols-6 ">
                                 {nonRepeatedCategory.map((singleArtData) => (
                                     <ArtCategories key={singleArtData._id} singleArtData={singleArtData} />
                                 ))}

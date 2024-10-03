@@ -1,24 +1,25 @@
 import { Link } from "react-router-dom";
 
-
 const ArtCategories = ({ singleArtData }) => {
-    const { _id, image, item_name, subcategory_name, price, rating, customization, description, processing_time, stock_status, user_email, user_name } = singleArtData;
+    const { _id, image, item_name, subcategory_name } = singleArtData;
 
     return (
-        <Link  to={`/categorizedData/${subcategory_name}`} >
-            <div className="relative shadow-xl hover:scale-105 hover:shadow-2xl">
+        <div >
+            <div className="relative flex flex-col justify-center transition-opacity duration-700 group">
                 <img
                     src={image}
-                    alt=""
-                    className="w-full h-44 object-cover rounded shadow-sm bg-gray-500 dark:bg-gray-500 aspect-square filter brightness-50"
+                    alt={item_name} // Update alt for accessibility
+                    className="w-full h-full object-cover aspect-square border-2 rounded-md"
                 />
-                <span className="absolute inset-0 flex items-center justify-center text-white font-bold text-xl uppercase">
-                    {subcategory_name}
-                </span>
+                <div className="absolute inset-0 flex flex-col justify-center items-center xl:px-8 py-4 backdrop-blur-sm bg-gray-800/60 opacity-0 transition-opacity duration-700 group-hover:opacity-100 rounded-md">
+                    <h2 className="mt-4 text-sm md:text-sm xl:text-xl font-semibold text-white capitalize">{subcategory_name}</h2>
+                    <Link to={`/categorizedData/${subcategory_name}`}>
+                        <p className="mt-2 text-xs md:text-xs xl:text-lg tracking-wider font-medium text-[#CFAE7A] uppercase border px-2 border-[#CFAE7A]">View All </p>
+                    </Link>
+                </div>
             </div>
-        </Link>
-
-
+            <h1 className="text-center text-xs lg:text-xl font-medium">{subcategory_name}</h1>
+        </div>
     );
 };
 
