@@ -8,7 +8,7 @@ const MainLayout = () => {
         <div className="font-teko">
             <div className=' '>
                 <Navbar></Navbar>
-                <div className='  px-5'>
+                <div className='px-5'>
                     <Outlet></Outlet>
                 </div>
             </div>
