@@ -5,7 +5,7 @@ import { Toaster } from "react-hot-toast";
 
 const MainLayout = () => {
     return (
-        <div>
+        <div className="font-teko">
             <div className=' '>
                 <Navbar></Navbar>
                 <div className='  px-5'>
