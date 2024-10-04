@@ -13,9 +13,11 @@ const Banner = () => {
                 <p className="text-gray-600 text-[12px] sm:text-xs lg:text-base">
                     Discover The World Through Original Paintings For Sale
                 </p>
+                <a href="#categories" >
                 <button className="px-2 py-1 xl:px-4 xl:py-1 bg-[#CFAE7A] text-white shadow-md hover:bg-yellow-700 transition text-[12px] sm:text-xs lg:text-base">
-                    SHOP NOW
+                    EXPLORE NOW
                 </button>
+                </a>
             </div>
             {/* Right Image Section */}
             <div className="w-[50%] flex justify-center">
