@@ -17,7 +17,7 @@ const AllArtTable = ({ loadedCards }) => {
             <col />
             <col />
           </colgroup>
-          <thead className="bg-[#807d7d] text-white">
+          <thead className="border border-[#CFAE7A] text-black bg-slate-200">
             <tr className="text-left">
               <th className="p-1 md::p-2 lg:p-3  max-w-[80px] lg:max-w-full ">Name</th>
               <th className="p-1 md::p-2 lg:p-3  max-w-[60px] lg:max-w-full">Category</th>
@@ -43,7 +43,7 @@ const AllArtTable = ({ loadedCards }) => {
                 </td>
                 <td className="py-2 lg:p-3  max-w-[60px] lg:max-w-full">
                   <span className="">
-                    <Link to={`/craftArts/${singleCard._id}`}><span className="text-[7px] md:text-[10px] lg:text-sm x-2 py-1 xl:px-4 xl:py-1 bg-[#CFAE7A] text-white shadow-md hover:bg-yellow-700 transition">Details</span></Link>
+                    <Link to={`/craftArts/${singleCard._id}`}><span className="text-[7px] md:text-[10px] lg:text-sm px-2 py-1 xl:px-4 xl:py-1 bg-[#CFAE7A] text-white shadow-md hover:bg-yellow-700 transition">Details</span></Link>
                   </span>
                 </td>
               </tr>

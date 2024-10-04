@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         'teko': ['Teko', 'sans-serif'],
+        'satisfy': ['Satisfy', 'cursive'], // Added "Satisfy" font
       },
       fontWeight: {
         300: '300',

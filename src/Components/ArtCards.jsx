@@ -23,8 +23,8 @@ const ArtCards = ({ singleArtData }) => {
                 <div className="p-2">
                     {/* Title and Category */}
                     <div>
-                        <h2 className="font-bold text-lg mb-2 underline">{item_name}</h2>
-                        <h2 className="font-medium text-xs lg:text-sm mb-4">Category : {subcategory_name}</h2>
+                        <h2 className="font-bold text-lg  mb-2 font-satisfy">{item_name}</h2>
+                        <h2 className="font-medium text-xs lg:text-sm mb-4"><span className="text-[#CFAE7A]">Category :</span> {subcategory_name}</h2>
 
                         {/* Price and Customization */}
                         <div className="flex items-center justify-between mb-4">

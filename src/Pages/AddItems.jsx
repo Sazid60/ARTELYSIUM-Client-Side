@@ -50,9 +50,9 @@ const AddItems = () => {
     }
 
     return (
-        <>
-            <h1 className="text-center text-2xl md:text-2xl lg:text-3xl  font-bold mt-3 underline uppercase" >Add Art & Craft</h1>
-            <p className="text-center  text-xs md:text-lg lg:text-lg max-w-2xl mx-auto mt-2 mb-3" >Bring your ideas to life with our quality craft supplies!</p>
+        <div className="container mx-auto">
+            <h1 className="text-center text-xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3 underline uppercase" >Add Art & Craft</h1>
+            <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto" >Bring your ideas to life with our quality craft supplies!</p>
             <form onSubmit={handleAdd}>
                 
                 <div className="md:flex mb-2 md:mb-4 lg:mb-4">
@@ -177,9 +177,9 @@ const AddItems = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Add Item" className="btn btn-block bg-[#CFAE7A] rounded-none hover:bg-yellow-700 rounded-none text-white uppercase" />
+                <input type="submit" value="Add Item" className="btn btn-block bg-[#CFAE7A] rounded-none hover:bg-yellow-700 text-white uppercase" />
             </form>
-        </>
+        </div>
     );
 };
 

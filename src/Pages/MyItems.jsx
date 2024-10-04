@@ -68,7 +68,7 @@ const MyItems = () => {
     // const displayedData = showAll ? filteredData : filteredData.slice(0, 9);
     return (
         <>
-            <h1 className="text-center text-2xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3 underline uppercase">My Carts & Arts</h1>
+            <h1 className="text-center text-xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-3 underline uppercase">My Carts & Arts</h1>
             <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto" >Easily update your listings with new images, descriptions, prices, and more. Keep your collection fresh and engaging with just a few clicks.</p>
 
             <div className="dropdown dropdown-hover mt-3 lg:px-28 ">
@@ -84,17 +84,17 @@ const MyItems = () => {
             }
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-6 mt-4 lg:px-28">
                 {
-                    filteredData.map(singleArtData => <div key={singleArtData._id} className="bg-base-100 shadow-md p-2 hover:scale-105 hover:shadow-2xl" >
-                        <figure className="w-full ">
-                            <img className="object-cover h-32 md:h-32 lg:h-36 w-full" src={singleArtData.image} alt="" />
+                    filteredData.map(singleArtData => <div key={singleArtData._id} className="bg-base-100 border-2 rounded-md p-2" >
+                        <figure className="w-full hover:scale-105 transition-all duration-300 hover:p-3">
+                            <img className="w-full h-full object-cover aspect-square rounded-t-md" src={singleArtData.image} alt="" />
                             <h1 className={`font-medium text-xs flex justify-center items-center rounded-sm bg-[#1a1919] text-white px-1 py-0.5}`}>
                                 {singleArtData.stock_status}
                             </h1>
                         </figure>
                         <div className="p-2">
                             <div>
-                                <h2 className="font-bold text-sm lg:text-lg  mb-2 ">{singleArtData.item_name} </h2>
-                                <h2 className="font-medium text-xs lg:text-sm mb-4">Category : {singleArtData.subcategory_name}</h2>
+                                <h2 className="font-bold text-sm lg:text-lg  mb-2 font-satisfy ">{singleArtData.item_name} </h2>
+                                <h2 className="font-medium text-xs lg:text-sm mb-4"><span className="text-[#CFAE7A]">Category :</span> {singleArtData.subcategory_name}</h2>
 
                                 <div className="flex items-center justify-between mb-4">
                                     <p className=" text-xs lg:text-sm flex items-center gap-1 "><span className=" font-bold">Price : </span> <span className="font-bold"> {singleArtData.price} BDT</span> </p>
@@ -112,9 +112,9 @@ const MyItems = () => {
                             </div>
                             <div className="flex lg:justify-center gap-3">
                                 {/* <Link to={`/craftArtsUpdate/${_id}`}> <button className="btn btn-sm bg-[#FFECB3] mt-4 mb-6 text-black w-28">Update</button></Link> */}
-                                <Link className="w-1/2" to={`/craftArtsUpdate/${singleArtData._id}`}> <button className="btn btn-sm bg-[#FFECB3] mt-4 mb-6 text-black w-full">Update</button></Link>
+                                <Link className="w-1/2" to={`/craftArtsUpdate/${singleArtData._id}`}> <button className="btn btn-sm bg-[#CFAE7A] hover:bg-[#A16207] rounded-none mt-4 mb-6 text-white w-full">Update</button></Link>
                                 {/* delete */}
-                                <button className="btn btn-sm bg-[#da3131] mt-4 mb-6 text-white w-1/2" onClick={() => handleDelete(singleArtData._id)}>Delete</button>
+                                <button className="btn btn-sm bg-[#da3131] rounded-none mt-4 mb-6 text-white w-1/2" onClick={() => handleDelete(singleArtData._id)}>Delete</button>
                             </div>
                         </div>
                     </div>

@@ -27,8 +27,8 @@ const CategorizedData = () => {
                                     </figure>
                                     <div className="p-2">
                                         <div>
-                                            <h2 className="font-bold text-lg  mb-2 ">{singleArtData.item_name}</h2>
-                                            <h2 className="font-medium text-xs lg:text-sm mb-4">Category : {singleArtData.subcategory_name}</h2>
+                                            <h2 className="font-bold text-lg  mb-2 font-satisfy">{singleArtData.item_name}</h2>
+                                            <h2 className="font-medium text-xs lg:text-sm mb-4"><span className="text-[#CFAE7A]">Category : </span>{singleArtData.subcategory_name}</h2>
 
                                             <div className="flex items-center justify-between mb-4">
                                                 <p className=" text-sm  flex items-center gap-1 "><span className=" font-bold">Price : </span> <span className="font-bold">{singleArtData.price} BDT</span> </p>
@@ -39,7 +39,7 @@ const CategorizedData = () => {
                                         </div>
                                         <div className="flex justify-between mb-4 mt-2 text-center">
                                             <p className="font-semibold text-xs flex items-center gap-1 "><span className=" font-bold">Processing Time :</span>{singleArtData.processing_time} Days</p>
-                                            <p className="font-bold text-xs  flex items-center gap-1 "><span className="">{singleArtData.rating}</span><FaStar className="text-amber-300" /></p>
+                                            <p className="font-bold text-xs flex items-center gap-1"><span className="">{singleArtData.rating}</span><FaStar className="text-amber-300" /></p>
                                         </div>
                                         <div className="flex gap-2 mb-2 mt-2 text-center">
 

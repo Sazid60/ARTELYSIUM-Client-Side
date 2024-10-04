@@ -84,16 +84,16 @@ const UpdateArtItem = () => {
 
 
     return (
-        <>
-            <h1 className="text-center text-2xl md:text-2xl lg:text-3xl  font-bold mt-3 uppercase underline" >Update Art & Craft</h1>
-            <p className="text-center  text-xs md:text-lg lg:text-lg max-w-2xl mx-auto mt-2 mb-3" >Bring your ideas to life with our quality craft supplies!</p>
+        <div className="container mx-auto">
+            <h1 className="text-center text-xl md:text-2xl lg:text-3xl font-bold md:mt-4 mb-1 md:mb-2 lg:mb-4 mt-2 underline uppercase" >Update Art & Craft</h1>
+            <p className="text-center text-xs md:text-lg lg:text-lg max-w-2xl mx-auto mb-3" >Bring your ideas to life with our quality craft supplies!</p>
             <div className='relative h-[150px] md:h-[300px] lg:h-[400px] w-full '>
                 <div className='absolute inset-0 bg-cover bg-center bg-no-repeat flex justify-center items-center'>
                     <img src={image} alt="Banner Image" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-50"></div>
                 <div className="absolute inset-0 flex justify-center items-center">
-                    <h1 className="text-2xl md:text-2xl lg:text-3xl font-bold text-white text-center" >{item_name}</h1>
+                    <h1 className="text-2xl md:text-2xl lg:text-3xl font-bold text-white text-center font-satisfy" >{item_name}</h1>
                 </div>
             </div>
             <h1 className="mt-2 font-bold text-lg">Want To Update?</h1>
@@ -219,9 +219,9 @@ const UpdateArtItem = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Update Item" className="btn btn-block bg-[#333333] text-white" />
+                <input type="submit" value="Update Item" className="btn btn-block bg-[#CFAE7A] rounded-none hover:bg-yellow-700 text-white uppercase" />
             </form>
-        </>
+        </div>
     );
 };
 
