@@ -8,13 +8,11 @@
 #### Server-Side Repository: https://github.com/Sazid60/ARTELYSIUM-Server-Side
 
 #### Overview:
-ARTELYSIUM is all about arts & crafts. This website represents some fine artworks. User see added art works added by different persons. User can see categorized data. A person can create artwork selling card. Moreover he can see his added arts, as well as he can delete & update his art information. User can access private pages(add arts, My Arts, Art Details).This website is responsive for all devices and available for dark and light mode toggling. All data are stored in Database. 
+ARTELYSIUM is all about arts & crafts. This website represents some fine artworks. User see added art works added by different persons. User can see categorized data. A person can create artwork selling card. Moreover he can see his added arts, as well as he can delete & update his art information. User can access private pages(add arts, My Arts, Art Details).This website is responsive. All data are stored in Database. 
 
 ### Features & Characteristics:
 
 - Navbar: Navbar has active routes to navigate through pages. Displays User image & functional Logout button when logged in; otherwise, displays default blank user image, login and register button.
-
-- Theme Control: Just Beside the Website Title Dark & Light Them Toggling Button Added. 
 
 - Public Routes: User Can Access Home Page, All Art & Craft,Categorized Arts Login & Register Page.
 
